@@ -8,7 +8,7 @@
     <script defer src="assets/js/state.js"></script>
     <script defer>
       document.addEventListener('DOMContentLoaded', () => {
-        const {ARTIFACTS, isSolved, solvedCount, potSVG} = window.JomonQuiz;
+        const {ARTIFACTS, isSolved, solvedCount, potIMG} = window.JomonQuiz;
         const grid = document.querySelector('#grid');
         const iconGrid = document.querySelector('#iconGrid');
         const total = ARTIFACTS.length;
@@ -42,7 +42,7 @@
 
           const potWrap = document.createElement('div');
           potWrap.className = 'pot-wrap';
-          potWrap.innerHTML = potSVG({color: art.potColor, solved: solvedThis});
+          potWrap.innerHTML = potIMG({src: art.imageUrl, solved: solvedThis,alt: art,name});
           card.appendChild(potWrap);
 
           const title = document.createElement('div');
