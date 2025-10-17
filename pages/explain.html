@@ -14,7 +14,7 @@
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
-        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
+        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="./index.html">図鑑へ戻る</a></p>';
         return;
         }
         document.getElementById('name').textContent = art.name;
@@ -23,7 +23,7 @@
         JomonQuiz.qs('#pot').innerHTML = JomonQuiz.potIMG({src: art.imageUrl,solved: JomonQuiz.isSolved(art.id),alt: art.name});
 
         const quizLink = document.getElementById('toquiz');
-        quizLink.href = `quiz.html?id=${art.id}`;
+        quizLink.href = `pages/quiz.html?id=${art.id}`;
         });
     </script>
 </head>
@@ -31,7 +31,7 @@
     <div class="container">
       <header class="site">
         <h1 id="name">資料</h1>
-        <a href="../index.html" class="badge">図鑑へ</a>
+        <a href="./index.html" class="badge">図鑑へ</a>
       </header>
 
       <div class="article">
