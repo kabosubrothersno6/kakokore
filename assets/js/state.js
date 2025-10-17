@@ -62,7 +62,8 @@
     isSolved(id){ return localStorage.getItem("jomon:solved:"+id) === "1"; },
     setSolved(id, v=true){ localStorage.setItem("jomon:solved:"+id, v ? "1":""); },
     clearAll(){ ARTIFACTS.forEach(a => localStorage.removeItem("jomon:solved:"+a.id)); },
-    solvedCount(){ return ARTIFACTS.filter(a => this.isSolved(a.id)).length; },
+    //solvedCount(){ return ARTIFACTS.filter(a => this.isSolved(a.id)).length; },
+    solvedCount(){ return ARTIFACTS.filter(a => window.JomonQuiz.isSolved(a.id)).length; },
     // tiny util
     qs(sel, root=document){ return root.querySelector(sel); },
     qsa(sel, root=document){ return Array.from(root.querySelectorAll(sel)); },
