@@ -1,37 +1,40 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ごほうび｜縄文クイズ</title>
-    <link rel="stylesheet" href="../assets/css/style.css"/>
-    <script defer src="../assets/js/state.js"></script>
+    <!--<link rel="stylesheet" href="../assets/css/style.css"/>
+    <script defer src="../assets/js/state.js"></script>-->
+    <base href="../">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/state.js"></script>
     <script defer>
-      document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
-          document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
-          return;
+        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
+        return;
         }
         document.getElementById('name').textContent = art.name;
 
         const solved = JomonQuiz.isSolved(id);
-        document.getElementById('pot').innerHTML = JomonQuiz.potSVG({color: art.potColor, solved});
+        JomonQuiz.qs('#pot').innerHTML = JomonQuiz.potIMG({src: art.imageUrl,solved,alt: art.name});
 
         const msg = document.getElementById('msg');
         if(solved){
-          msg.innerHTML = 'おめでとう！シルエットだった土器に色がつきました。';
+        msg.innerHTML = 'おめでとう！シルエットだった土器に色がつきました。';
         }else{
-          msg.innerHTML = 'まだクイズに正解していません。<br/>クイズに正解すると色がつきます。';
+        msg.innerHTML = 'まだクイズに正解していません。<br/>クイズに正解すると色がつきます。';
         }
 
         document.getElementById('toQuiz').href = `quiz.html?id=${art.id}`;
         document.getElementById('toExplain').href = `explain.html?id=${art.id}`;
         document.getElementById('toIndex').href = `../index.html`;
-      });
+        });
     </script>
-  </head>
+</head>
   <body>
     <div class="container">
       <header class="site">
