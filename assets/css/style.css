@@ -79,3 +79,21 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
   border:1px solid var(--accent-2);
   border-radius:16px;padding:18px
 }
+
+/* 写真（透過WebP/PNG）を表示する共通クラス */
+.pot {
+  display: block;
+  width: 200px;       
+  height: auto;
+  image-rendering: auto;
+}
+
+/* 未クリア時は非透明画素だけ黒く見せる（透明は透明のまま） */
+.pot.unsolved {
+  filter: grayscale(1) brightness(0);
+}
+
+/* クリア時は元写真のまま（必要なら軽いドロップシャドウなど） */
+.pot.solved {
+/* 例: filter: none; box-shadow: 0 2px 8px #00000022; */
+}
