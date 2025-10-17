@@ -10,15 +10,35 @@
       document.addEventListener('DOMContentLoaded', () => {
         const {ARTIFACTS, isSolved, solvedCount, potSVG} = window.JomonQuiz;
         const grid = document.querySelector('#grid');
+        const iconGrid = document.querySelector('#iconGrid');
         const total = ARTIFACTS.length;
         const solved = solvedCount();
         document.querySelector('#count').textContent = `${solved}/${total}`;
         document.querySelector('#barfill').style.width = `${Math.round(solved/total*100)}%`;
 
-        ARTIFACTS.forEach(art => {
+        const sortedById = ARTIFACTS.slice().sort((a, b) => a.id.localeCompare(b.id));
+        if(iconGrid){ iconGrid.innerHTML = ''; }
+        grid.innerHTML = '';
+
+        sortedById.forEach(art => { //これに変更
           const card = document.createElement('div');
           card.className = 'card';
+          card.setAttribute('data-artifact-id', art.id);
           const solvedThis = isSolved(art.id);
+
+          if(iconGrid){
+             const iconCard = document.createElement('div');
+             iconCard.className = 'icon-card';
+             const iconWrap = document.createElement('div');
+             iconWrap.className = 'icon-card__visual';
+             iconWrap.innerHTML = potSVG({color: art.potColor, solved: solvedThis});
+             iconCard.appendChild(iconWrap);
+             const iconName = document.createElement('div');
+             iconName.className = 'icon-card__label';
+             iconName.textContent = art.name;
+             iconCard.appendChild(iconName);
+             iconGrid.appendChild(iconCard);
+            }
 
           const potWrap = document.createElement('div');
           potWrap.className = 'pot-wrap';
