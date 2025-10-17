@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>説明｜縄文クイズ</title>
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <script defer src="../assets/js/state.js"></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', () => {
+        const id = JomonQuiz.param('id');
+        const art = JomonQuiz.getArtifact(id);
+        if(!art){
+          document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
+          return;
+        }
+        document.getElementById('name').textContent = art.name;
+        document.getElementById('site').textContent = art.site;
+        document.getElementById('desc').textContent = art.description;
+        document.getElementById('pot').innerHTML = JomonQuiz.potSVG({color: art.potColor, solved: JomonQuiz.isSolved(id)});
+
+        const quizLink = document.getElementById('toquiz');
+        quizLink.href = `quiz.html?id=${art.id}`;
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site">
+        <h1 id="name">資料</h1>
+        <a href="../index.html" class="badge">図鑑へ</a>
+      </header>
+
+      <div class="article">
+        <div class="pot-wrap" id="pot"></div>
+        <p class="muted" id="site"></p>
+        <h2>遺物の説明</h2>
+        <p id="desc"></p>
+      </div>
+
+      <div class="actions" style="margin-top:12px">
+        <a id="toquiz" class="button primary">この資料のクイズへ進む</a>
+      </div>
+    </div>
+  </body>
+</html>
