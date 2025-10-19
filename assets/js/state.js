@@ -50,8 +50,26 @@
         ],
         correctIndex: 2
       }
+    },
+        {
+      id: "4",
+      name: "棚古器",
+      site: "（サンプル）外国の国東遺跡",
+      potColor: "#A6623A",
+      imageUrl:"assets/img/id1.webp",
+      description: "（サンプル）大きさは普通の土器だが細い。ほかの土器に比べて軽い。",
+      question: {
+        text: "棚古器の名前の由来は？",
+        choices: [
+          "当て字",
+          "棚に保管されていた",
+          "棚の修理に使われていた"
+        ],
+        correctIndex: 0
+      }
     }
   ];
+
 
   // expose
  window.JomonQuiz = {
