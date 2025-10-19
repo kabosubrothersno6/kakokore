@@ -5,7 +5,7 @@
       name: "火焔型土器",
       site: "（サンプル）新潟県周辺の縄文遺跡",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id1.webp",
+      imageUrl:"assets/img/kaen.webp",
       description: "（サンプル）口縁部に炎のような装飾が見られる豪壮な土器。展示では造形のリズムと左右対称の美しさに注目してみましょう。",
       question: {
         text: "火焔型土器の特徴として最も適切なのはどれ？",
@@ -22,7 +22,7 @@
       name: "深鉢形土器",
       site: "（サンプル）東北地方の縄文遺跡",
       potColor: "#A6623A",
-      imageUrl:"assets/img/id1.webp",
+      imageUrl:"assets/img/kaen.webp",
       description: "（サンプル）深い鉢形で、煮炊きに適したと考えられる土器。縄目文様のパターンや焼成の色ムラが見どころです。",
       question: {
         text: "深鉢形土器の“深い”形は主に何に向いていたと考えられる？",
@@ -39,7 +39,7 @@
       name: "愛絆土器",
       site: "（サンプル）大分県内の大分市周辺",
       potColor: "#C0763A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id2.webp",
       description: "（サンプル）ほかのものと比べて形が大きい。よく出土する場所はゲームセンター、カラオケ等。",
       question: {
         text: "愛絆土器の特徴として最も適切なのはどれ？",
