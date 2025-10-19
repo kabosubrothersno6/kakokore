@@ -22,7 +22,7 @@
       name: "深鉢形土器",
       site: "（サンプル）東北地方の縄文遺跡",
       potColor: "#A6623A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id1.webp",
       description: "（サンプル）深い鉢形で、煮炊きに適したと考えられる土器。縄目文様のパターンや焼成の色ムラが見どころです。",
       question: {
         text: "深鉢形土器の“深い”形は主に何に向いていたと考えられる？",
