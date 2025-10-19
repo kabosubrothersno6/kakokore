@@ -55,24 +55,24 @@
           site.textContent = art.site;
           card.appendChild(site);
 
-          const chip = document.createElement('div');
-          chip.className = 'badge';
-          chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
-          card.appendChild(chip);
+          // const chip = document.createElement('div');
+          // chip.className = 'badge';
+          // chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
+          // card.appendChild(chip);
 
-          const actions = document.createElement('div');
-          actions.className = 'actions';
-          const btnExplain = document.createElement('a');
-          btnExplain.className = 'button';
-          btnExplain.href = `pages/explain.html?id=${art.id}`;
-          btnExplain.textContent = '説明を見る';
-          actions.appendChild(btnExplain);
+          // const actions = document.createElement('div');
+          // actions.className = 'actions';
+          // const btnExplain = document.createElement('a');
+          // btnExplain.className = 'button';
+          // btnExplain.href = `pages/explain.html?id=${art.id}`;
+          // btnExplain.textContent = '説明を見る';
+          // actions.appendChild(btnExplain);
 
-          const btnQuiz = document.createElement('a');
-          btnQuiz.className = 'button primary';
-          btnQuiz.href = `pages/quiz.html?id=${art.id}`;
-          btnQuiz.textContent = solvedThis ? 'クイズを復習' : 'クイズに挑戦';
-          actions.appendChild(btnQuiz);
+          // const btnQuiz = document.createElement('a');
+          // btnQuiz.className = 'button primary';
+          // btnQuiz.href = `pages/quiz.html?id=${art.id}`;
+          // btnQuiz.textContent = solvedThis ? 'クイズを復習' : 'クイズに挑戦';
+          // actions.appendChild(btnQuiz);
 
           const btnReward = document.createElement('a');
           btnReward.className = 'button';
