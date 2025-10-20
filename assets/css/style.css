@@ -62,7 +62,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
 
 /* content */
 .article{
-  background:#fff;border:1px solid var(--ring);border-radius:14px;padding:18px;line-height:1.00
+  background:#fff;border:1px solid var(--ring);border-radius:14px;padding:18px;line-height:0.85
 }
 .article h2{margin-top:0}
 .lead{color:var(--muted)}
