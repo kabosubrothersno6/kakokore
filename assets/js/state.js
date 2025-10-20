@@ -36,7 +36,7 @@
     },
      {
       id: "3",
-      name: "愛絆土器",
+      name: "長愛器",
       site: "（サンプル）大分県内の大分市周辺",
       potColor: "#C0763A",
       imageUrl:"assets/img/id2.webp",
