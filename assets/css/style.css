@@ -29,7 +29,7 @@ header.site h1{font-size:clamp(20px,4vw,28px);margin:0}
   box-shadow:0 1px 0 rgba(0,0,0,.03)
 }
 .card .title{font-weight:700}
-.card .muted{color:var(--muted);font-size:12px}
+.card .muted{color:var(--muted);font-size:8px}
 .card .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
 button, .button{
   appearance:none;border:1px solid var(--ring);background:#fff;border-radius:12px;padding:10px 12px;font-size:14px;cursor:pointer
