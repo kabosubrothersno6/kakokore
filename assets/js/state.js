@@ -39,7 +39,7 @@
       name: "長愛器",
       site: "（サンプル）大分県内の大分市周辺",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id2.webp",
+      imageUrl:"assets/img/kaen.webp",
       description: "（サンプル）ほかのものと比べて形が大きい。よく出土する場所はゲームセンター、カラオケ等。",
       question: {
         text: "愛絆土器の特徴として最も適切なのはどれ？",
@@ -56,7 +56,7 @@
       name: "棚古器",
       site: "（サンプル）外国の国東遺跡",
       potColor: "#A6623A",
-      imageUrl:"assets/img/id1.webp",
+      imageUrl:"assets/img/kaen.webp",
       description: "（サンプル）大きさは普通の土器だが細い。ほかの土器に比べて軽い。",
       question: {
         text: "棚古器の名前の由来は？",
