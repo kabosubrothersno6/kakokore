@@ -36,7 +36,7 @@
     },
      {
       id: "3",
-      name: "長愛器",
+      name: "真面目",
       site: "（サンプル）大分県内の大分市周辺",
       potColor: "#C0763A",
       imageUrl:"assets/img/kaen.webp",
