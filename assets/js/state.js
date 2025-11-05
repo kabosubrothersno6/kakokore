@@ -5,7 +5,7 @@
       name: "火焔型土器",
       site: "（サンプル）新潟県周辺の縄文遺跡",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id4.webp",
+      imageUrl:"assets/img/id3.webp",
       description: "（サンプル）口縁部に炎のような装飾が見られる豪壮な土器。展示では造形のリズムと左右対称の美しさに注目してみましょう。",
       question: {
         text: "火焔型土器の特徴として最も適切なのはどれ？",
@@ -39,7 +39,7 @@
       name: "動物型の土偶",
       site: "明野アクロスタウン",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id3.webp",
+      imageUrl:"assets/img/id4.webp",
       description: "カボスbrothers第六世代が作った土偶。この土偶を作りチームみんなの指揮が高まった。",
       question: {
         text: "この土偶の特徴として最も適切なのはどれ？",
@@ -87,8 +87,7 @@
     param(name){ return new URLSearchParams(location.search).get(name); },
     potIMG({src, solved=false, alt="縄文土器"}) {
       const cls = solved ? "pot solved" : "pot unsolved";
-      return `<img class="${cls}" src="${src}" alt="${alt}" loading="lazy" decoding="async">`;
+      return `<img class="${cls}" src="${src}" alt="${alt}" loading="eager" decoding="async">`;
     }
   };
 })();
-
