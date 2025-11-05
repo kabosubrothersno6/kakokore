@@ -39,7 +39,7 @@
       name: "真面目",
       site: "（サンプル）大分県内の大分市周辺",
       potColor: "#C0763A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id4.webp",
       description: "（サンプル）ほかのものと比べて形が大きい。よく出土する場所はゲームセンター、カラオケ等。",
       question: {
         text: "愛絆土器の特徴として最も適切なのはどれ？",
