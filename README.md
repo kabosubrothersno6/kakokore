@@ -3,7 +3,7 @@
 - `index.html` … 図鑑ページ（進捗表示・各資料へのリンク）
 - `pages/explain.html?id=<id>` … 各資料の説明ページ
 - `pages/quiz.html?id=<id>` … クイズページ
-- `pages/reward.html?id=<id>` … ごほうび（色がつく）ページ
+- `pages/reward.html?id=<id>` … ごほうび　（写真に色がつく）ページ
 - 進捗は `localStorage` に `jomon:solved:<id>` として保存
 
 ## 資料の追加方法
@@ -15,6 +15,7 @@
   name: "○○土器",      // 表示名
   site: "（サンプル）展示場所など",
   potColor: "#C0763A",  // 色がついた時のテラコッタ色
+  imageUrl:"assets/img/???.webp",
   description: "説明文（自由）",
   question: {
     text: "問題文",
