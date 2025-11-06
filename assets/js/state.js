@@ -53,19 +53,19 @@
     },
         {
       id: "4",
-      name: "真面目",
-      site: "（サンプル）外国の国東遺跡",
+      name: "壺型土器",
+      site: "東北地方",
       potColor: "#A6623A",
       imageUrl:"assets/img/kaen.webp",
-      description: "（サンプル）大きさは普通の土器だが細い。ほかの土器に比べて軽い。",
+      description: "貯蔵用や再葬墓の容器として使われた。",
       question: {
-        text: "棚古器の名前の由来は？",
+        text: "壺型土器は何のために使わていた？",
         choices: [
-          "当て字",
-          "棚に保管されていた",
-          "棚の修理に使われていた"
+          "漬物等を作るため",
+          "食料を貯蔵するため",
+          "料理用に使われていた"
         ],
-        correctIndex: 0
+        correctIndex: 1
       }
     }
   ];
