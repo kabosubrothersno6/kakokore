@@ -39,7 +39,7 @@
       name: "動物型の土偶",
       site: "明野アクロスタウン",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id3.webp",
+      imageUrl:"assets/img/id4.png",
       description: "カボスbrothers第六世代が作った土偶。この土偶を作りチームみんなの指揮が高まった。",
       question: {
         text: "この土偶の特徴として最も適切なのはどれ？",
