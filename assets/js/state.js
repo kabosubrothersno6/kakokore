@@ -2,7 +2,7 @@
   const ARTIFACTS = [
     {
       id: "1",
-      name: "火焔型土器",
+      name: "動物型の土偶",
       site: "新潟県周辺の縄文遺跡",
       potColor: "#C0763A",
       imageUrl:"assets/img/id5.png",
