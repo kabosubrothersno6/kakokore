@@ -2,8 +2,8 @@
   const ARTIFACTS = [
     {
       id: "1",
-      name: "動物型の土偶",
-      site: "新潟県周辺の縄文遺跡",
+      name: "巴型銅器",
+      site: "大分市、雄乗台遺跡",
       potColor: "#C0763A",
       imageUrl:"assets/img/id6.png",
       description: "口縁部に炎のような装飾が見られる豪壮な土器。展示では造形のリズムと左右対称の美しさに注目してみましょう。",
