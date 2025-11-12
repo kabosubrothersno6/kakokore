@@ -18,7 +18,7 @@
         return;
         }
         document.getElementById('name').textContent = art.name;
-        document.getElementById('explain').textContent = art.description || '説明はありません。';
+        document.getElementById('explain').textContent = art.explanation || '説明はありません。';
 
 
         const solved = JomonQuiz.isSolved(id);
