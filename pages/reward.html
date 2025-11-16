@@ -18,6 +18,8 @@
         return;
         }
         document.getElementById('name').textContent = art.name;
+        document.getElementById('explain').textContent = art.explanation || '説明はありません。';
+
 
         const solved = JomonQuiz.isSolved(id);
         JomonQuiz.qs('#pot').innerHTML = JomonQuiz.potIMG({src: art.imageUrl,solved,alt: art.name});
@@ -43,13 +45,14 @@
       </header>
 
       <div class="reward-box">
-        <div id="pot" class="pot-wrap"></div>
-        <p id="msg" style="margin:8px 0 0 0"></p>
-        <div class="actions" style="margin-top:10px">
-          <a id="toIndex" class="button primary">図鑑へ戻る</a>
-          <a id="toExplain" class="button">説明を見る</a>
-          <a id="toQuiz" class="button">クイズへ</a>
-        </div>
+          <div id="pot" class="pot-wrap"></div>
+          <p id="msg" style="margin:8px 0 0 0"></p>
+          <p id="explain" class="explain" style="margin-top:10px;"></p>
+          <div class="actions" style="margin-top:10px">
+              <a id="toIndex" class="button primary">図鑑へ戻る</a>
+              <a id="toExplain" class="button">説明を見る</a>
+              <a id="toQuiz" class="button">クイズへ</a>
+          </div>
       </div>
     </div>
   </body>

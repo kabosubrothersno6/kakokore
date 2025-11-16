@@ -15,7 +15,8 @@
           "貨幣"
         ],
         correctIndex: 0
-      }
+      },
+      explanation:"大分市の雄城台遺跡（県指定有形文化財の巴形銅器が知られる）。同遺跡では第9次調査で柱穴内から出土.ぐるぐると渦を巻く巴文が外周に伸びる円盤状金具。作例は4～8枚程度の「脚（羽）」、中央に半球状または円錐状の座（ボス）をもつ。",
     },
     {
       id: "2",
@@ -24,6 +25,7 @@
       potColor: "#A6623A",
       imageUrl:"assets/img/kaen.webp",
       description: "深い鉢形で、煮炊きに適したと考えられる土器。縄目文様のパターンや焼成の色ムラが見どころです。",
+      explanation:"解説",
       question: {
         text: "深鉢形土器の“深い”形は主に何に向いていたと考えられる？",
         choices: [
@@ -41,6 +43,7 @@
       potColor: "#C0763A",
       imageUrl:"assets/img/id5.png",
       description: "カボスbrothers第六世代が作った土偶。この土偶を作りチームみんなの指揮が高まった。",
+      explanation:"この土偶は明野Brothers第６世代の高学年組が、日本大会に出られるように皆で作られたものである。",
       question: {
         text: "この土偶の特徴として最も適切なのはどれ？",
         choices: [
@@ -58,6 +61,7 @@
       potColor: "#A6623A",
       imageUrl:"assets/img/kaen.webp",
       description: "貯蔵用や再葬墓の容器として使われた。",
+      explanation:"解説",
       question: {
         text: "壺型土器は何のために使わていた？",
         choices: [
@@ -67,6 +71,7 @@
         ],
         correctIndex: 1
       }
+
     }
   ];
 
