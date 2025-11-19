@@ -5,7 +5,7 @@
       name: "巴型銅器",
       site: "大分市、雄乗台遺跡",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id6.png",
+      imageUrl:"assets/img/id1.png",
       description: "盾や矢筒に取り付けられていた装飾金具。魔除けの意味合いがあるとも言われている。弥生期の北部九州を中心に関東まで点在している。",
       question: {
         text: "巴型土器の最も一般的な用途解釈はどれ？",
@@ -23,7 +23,7 @@
       name: "深鉢形土器",
       site: "東北地方の縄文遺跡",
       potColor: "#A6623A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id2.png",
       description: "深い鉢形で、煮炊きに適したと考えられる土器。縄目文様のパターンや焼成の色ムラが見どころです。",
       explanation:"解説",
       question: {
@@ -41,7 +41,7 @@
       name: "動物型の土偶",
       site: "明野アクロスタウン",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id5.png",
+      imageUrl:"assets/img/id3.png",
       description: "カボスbrothers第六世代が作った土偶。この土偶を作りチームみんなの指揮が高まった。",
       explanation:"この土偶は明野Brothers第６世代の高学年組が、日本大会に出られるように皆で作られたものである。",
       question: {
@@ -59,7 +59,7 @@
       name: "壺型土器",
       site: "東北地方",
       potColor: "#A6623A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id4.png",
       description: "貯蔵用や再葬墓の容器として使われた。",
       explanation:"解説",
       question: {
@@ -96,7 +96,7 @@
       name: "緡銭",
       site: "大分市内",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id5.png",
+      imageUrl:"assets/img/id6.png",
       description:"戦国時代、寺院が財力を持っており、土の中に銭を隠していて、寺が燃えて銭も焼けたと考えられている。",
       explanation:"一束１００枚にまとめられており、今の価格で一枚千円の価値がある。",
       question: {
@@ -114,7 +114,7 @@
       name: "中広型銅矛",
       site: "元畑遺跡",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id5.png",
+      imageUrl:"assets/img/id7.png",
       description: "中国から伝えられ、武器から祭器に代わり、祈りや祈願のために使われていたと考えられる。",
       explanation:"この遺物は刃部に刃がついておらず、柄も無くなっている。",
       question: {
@@ -132,7 +132,7 @@
       name: "名称不明",
       site: "出土場所不明",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id5.png",
+      imageUrl:"assets/img/id8.png",
       description: "この時代、細部を細かく作るための技術が無かった為,作れなかった。",
       explanation:"取っ手等は、縄文時代には作られていた。",
       question: {
