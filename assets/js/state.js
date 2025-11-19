@@ -72,7 +72,79 @@
         correctIndex: 1
       }
 
-    }
+    },
+    {
+      id: "5",
+      name: "玉類",
+      site: "大分市大在浜遺跡",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id5.png",
+      description: "作成時、金属等で穴をあけるのではなく、動物の骨で穴をあけていた。",
+      explanation:"玉類の穴は今より簡単に作れるものではなく、当時は最高級の贈り物だとされている。",
+      question: {
+        text: "この遺物はどのように作られた？",
+        choices: [
+          "動物の骨などで穴をあけた",
+          "金属の針で穴をあけた",
+          "砂浜で拾った"
+        ],
+        correctIndex: 0
+      }
+    },
+         {
+      id: "6"",
+      name: "緡銭",
+      site: "大分市内",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id5.png",
+      description:"戦国時代、寺院が財力を持っており、土の中に銭を隠していて、寺が燃えて銭も焼けたと考えられている。",
+      explanation:"一束１００枚にまとめられており、今の価格で一枚千円の価値がある。",
+      question: {
+        text: "この遺物はどうして溶けているのか？",
+        choices: [
+          "チョコレートだから",
+          "太陽で焼けたから",
+          "寺院と一緒に焼けたから"
+        ],
+        correctIndex: 2
+      }
+    },
+         {
+      id: "7",
+      name: "中広型銅矛",
+      site: "元畑遺跡",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id5.png",
+      description: "中国から伝えられ、武器から祭器に代わり、祈りや祈願のために使われていたと考えられる。",
+      explanation:"この遺物は刃部に刃がついておらず、柄も無くなっている。",
+      question: {
+        text: "この遺物は何に使われていたか？",
+        choices: [
+          "かっこいい置物として",
+          "祈願などの祭具として",
+          "戦いの道具として"
+        ],
+        correctIndex: 1
+      }
+    },
+         {
+      id: "8",
+      name: "名称不明",
+      site: "出土場所不明",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id5.png",
+      description: "この時代、細部を細かく作るための技術が無かった為,作れなかった。",
+      explanation:"取っ手等は、縄文時代には作られていた。",
+      question: {
+        text: "この土器は何故小さい穴が空いているのか？",
+        choices: [
+          "ゴミ箱だから",
+          "落として割れたから",
+          "水を注ぐため"
+        ],
+        correctIndex: 2
+      }
+    },
   ];
 
 
