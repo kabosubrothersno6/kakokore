@@ -5,7 +5,7 @@
       name: "巴型銅器",
       site: "大分市、雄乗台遺跡",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id6.png",
+      imageUrl:"assets/img/id1.png",
       description: "盾や矢筒に取り付けられていた装飾金具。魔除けの意味合いがあるとも言われている。弥生期の北部九州を中心に関東まで点在している。",
       question: {
         text: "巴型土器の最も一般的な用途解釈はどれ？",
@@ -16,14 +16,14 @@
         ],
         correctIndex: 0
       },
-      explanation:"大分市の雄城台遺跡（県指定有形文化財の巴形銅器が知られる）。同遺跡では第9次調査で柱穴内から出土.ぐるぐると渦を巻く巴文が外周に伸びる円盤状金具。作例は4～8枚程度の「脚（羽）」、中央に半球状または円錐状の座（ボス）をもつ。",
+      explanation:"ぐるぐると渦を巻く巴文が外周に伸びる円盤状金具。4～8枚程度の「脚（羽）」、中央に半球状または円錐状の座をもつ。",
     },
     {
       id: "2",
       name: "深鉢形土器",
       site: "東北地方の縄文遺跡",
       potColor: "#A6623A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id2.png",
       description: "深い鉢形で、煮炊きに適したと考えられる土器。縄目文様のパターンや焼成の色ムラが見どころです。",
       explanation:"解説",
       question: {
@@ -41,7 +41,7 @@
       name: "動物型の土偶",
       site: "明野アクロスタウン",
       potColor: "#C0763A",
-      imageUrl:"assets/img/id5.png",
+      imageUrl:"assets/img/id3.png",
       description: "カボスbrothers第六世代が作った土偶。この土偶を作りチームみんなの指揮が高まった。",
       explanation:"この土偶は明野Brothers第６世代の高学年組が、日本大会に出られるように皆で作られたものである。",
       question: {
@@ -59,7 +59,7 @@
       name: "壺型土器",
       site: "東北地方",
       potColor: "#A6623A",
-      imageUrl:"assets/img/kaen.webp",
+      imageUrl:"assets/img/id4.png",
       description: "貯蔵用や再葬墓の容器として使われた。",
       explanation:"解説",
       question: {
@@ -72,7 +72,79 @@
         correctIndex: 1
       }
 
-    }
+    },
+    {
+      id: "5",
+      name: "玉類",
+      site: "大分市大在浜遺跡",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id5.png",
+      description: "作成時、金属等で穴をあけるのではなく、動物の骨で穴をあけていた。",
+      explanation:"玉類の穴は今より簡単に作れるものではなく、当時は最高級の贈り物だとされている。",
+      question: {
+        text: "この遺物はどのように作られた？",
+        choices: [
+          "動物の骨などで穴をあけた",
+          "金属の針で穴をあけた",
+          "砂浜で拾った"
+        ],
+        correctIndex: 0
+      }
+    },
+         {
+      id: "6"",
+      name: "緡銭",
+      site: "大分市内",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id6.png",
+      description:"戦国時代、寺院が財力を持っており、土の中に銭を隠していて、寺が燃えて銭も焼けたと考えられている。",
+      explanation:"一束１００枚にまとめられており、今の価格で一枚千円の価値がある。",
+      question: {
+        text: "この遺物はどうして溶けているのか？",
+        choices: [
+          "チョコレートだから",
+          "太陽で焼けたから",
+          "寺院と一緒に焼けたから"
+        ],
+        correctIndex: 2
+      }
+    },
+         {
+      id: "7",
+      name: "中広型銅矛",
+      site: "元畑遺跡",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id7.png",
+      description: "中国から伝えられ、武器から祭器に代わり、祈りや祈願のために使われていたと考えられる。",
+      explanation:"この遺物は刃部に刃がついておらず、柄も無くなっている。",
+      question: {
+        text: "この遺物は何に使われていたか？",
+        choices: [
+          "かっこいい置物として",
+          "祈願などの祭具として",
+          "戦いの道具として"
+        ],
+        correctIndex: 1
+      }
+    },
+         {
+      id: "8",
+      name: "名称不明",
+      site: "出土場所不明",
+      potColor: "#C0763A",
+      imageUrl:"assets/img/id8.png",
+      description: "この時代、細部を細かく作るための技術が無かった為,作れなかった。",
+      explanation:"取っ手等は、縄文時代には作られていた。",
+      question: {
+        text: "この土器は何故小さい穴が空いているのか？",
+        choices: [
+          "ゴミ箱だから",
+          "落として割れたから",
+          "水を注ぐため"
+        ],
+        correctIndex: 2
+      }
+    },
   ];
 
 
