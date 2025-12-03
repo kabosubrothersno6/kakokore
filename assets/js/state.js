@@ -25,6 +25,7 @@
       potColor: "#A6623A",
       imageUrl:"assets/img/id2.png",
       description: "深い鉢形で、煮炊きに適したと考えられる土器。縄目文様のパターンや焼成の色ムラが見どころです。",
+      explanation:"この土偶は明野Brothers第６世代の高学年組が、日本大会に出られるように皆で作られたものである。",
       explanation:"解説",
       question: {
         text: "深鉢形土器の“深い”形は主に何に向いていたと考えられる？",
@@ -61,6 +62,7 @@
       potColor: "#A6623A",
       imageUrl:"assets/img/id4.png",
       description: "貯蔵用や再葬墓の容器として使われた。",
+      explanation:"この土偶は明野Brothers第６世代の高学年組が、日本大会に出られるように皆で作られたものである。",
       explanation:"解説",
       question: {
         text: "壺型土器は何のために使わていた？",
