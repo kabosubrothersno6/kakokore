@@ -97,3 +97,9 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
 .pot.solved {
 /* 例: filter: none; box-shadow: 0 2px 8px #00000022; */
 }
+/* ===== 時代見出し（index.html 用） ===== */
+#grid > h2 {
+    border-left: 6px solid var(--accent);
+    padding-left: 10px;
+    font-size: 20px;
+}

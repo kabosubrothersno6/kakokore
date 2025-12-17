@@ -16,73 +16,70 @@
         document.querySelector('#count').textContent = `${solved}/${total}`;
         document.querySelector('#barfill').style.width = `${Math.round(solved/total*100)}%`;
 
-        const sortedById = ARTIFACTS.slice().sort((a, b) => a.id.localeCompare(b.id));
-        if(iconGrid){ iconGrid.innerHTML = ''; }
         grid.innerHTML = '';
 
-        sortedById.forEach(art => { //これに変更
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.setAttribute('data-artifact-id', art.id);
-          const solvedThis = isSolved(art.id);
+        const grouped = {};
+        ARTIFACTS.forEach(art => {
+          const key = art.period || '不明';
+          if (!grouped[key]) grouped[key] = [];
+          grouped[key].push(art);
+        });
 
-          if(iconGrid){
-             const iconCard = document.createElement('div');
-             iconCard.className = 'icon-card';
-             const iconWrap = document.createElement('div');
-             iconWrap.className = 'icon-card__visual';
-             iconWrap.innerHTML = potSVG({color: art.potColor, solved: solvedThis});
-             iconCard.appendChild(iconWrap);
-             const iconName = document.createElement('div');
-             iconName.className = 'icon-card__label';
-             iconName.textContent = art.name;
-             iconCard.appendChild(iconName);
-             iconGrid.appendChild(iconCard);
-            }
+        const PERIOD_ORDER = [
+          "縄文時代",
+          "弥生時代",
+          "中世",
+          "近世",
+          "近代",
+          "現代（カボスBrothers）",
+          "不明"
+        ];
 
-          const potWrap = document.createElement('div');
-          potWrap.className = 'pot-wrap';
-          potWrap.innerHTML = potIMG({src: art.imageUrl, solved: solvedThis,alt: art,name});
-          card.appendChild(potWrap);
+        PERIOD_ORDER.forEach(period => {
+          if (!grouped[period]) return;
 
-          const title = document.createElement('div');
-          title.className = 'title';
-          title.textContent = art.name;
-          card.appendChild(title);
+          const h2 = document.createElement('h2');
+          h2.textContent = period;
+          h2.style.margin = "16px 0 8px";
+          grid.appendChild(h2);
 
-          const site = document.createElement('div');
-          site.className = 'muted';
-          site.textContent = art.site;
-          card.appendChild(site);
+          const section = document.createElement('div');
+          section.className = 'grid';
 
-          const chip = document.createElement('div');
-          chip.className = 'badge';
-          chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
-          card.appendChild(chip);
+          grouped[period].forEach(art => {
+            const card = document.createElement('div');
+            card.className = 'card';
 
-          const actions = document.createElement('div');
-          actions.className = 'actions';
-          const btnExplain = document.createElement('a');
-          // btnExplain.className = 'button';
-          // btnExplain.href = `pages/explain.html?id=${art.id}`;
-          // btnExplain.textContent = '説明を見る';
-        　actions.appendChild(btnExplain);
+            const solvedThis = isSolved(art.id);
 
-          const btnQuiz = document.createElement('a');
-          // btnQuiz.className = 'button primary';
-          // btnQuiz.href = `pages/quiz.html?id=${art.id}`;
-          // btnQuiz.textContent = solvedThis ? 'クイズを復習' : 'クイズに挑戦';
-          actions.appendChild(btnQuiz);
+            const potWrap = document.createElement('div');
+            potWrap.className = 'pot-wrap';
+            potWrap.innerHTML = potIMG({
+              src: art.imageUrl,
+              solved: solvedThis,
+              alt: art.name
+            });
+            card.appendChild(potWrap);
 
-          const btnReward = document.createElement('a');
-          // btnReward.className = 'button';
-          // btnReward.href = `pages/reward.html?id=${art.id}`;
-          // btnReward.textContent = 'ごほうびを見る';
-          actions.appendChild(btnReward);
+            const title = document.createElement('div');
+            title.className = 'title';
+            title.textContent = art.name;
+            card.appendChild(title);
 
-          card.appendChild(actions);
+            const site = document.createElement('div');
+            site.className = 'muted';
+            site.textContent = art.site;
+            card.appendChild(site);
 
-          grid.appendChild(card);
+            const chip = document.createElement('div');
+            chip.className = 'badge';
+            chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
+            card.appendChild(chip);
+
+            section.appendChild(card);
+          });
+
+          grid.appendChild(section);
         });
 
         document.querySelector('#reset').addEventListener('click', () => {
@@ -115,7 +112,7 @@
         <button id="reset" class="warn">進捗リセット</button>
       </div>
 
-      <section class="grid" id="grid" aria-live="polite"></section>
+      <section id="grid" aria-live="polite"></section>
     </div>
   </body>
 </html>
