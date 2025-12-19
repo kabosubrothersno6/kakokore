@@ -124,3 +124,12 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
             color: #fff;
             border-color: var(--accent);
         }
+
+/* ===== 推定価格 ===== */
+.price {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #92400e; /* 落ち着いた金色 */
+    font-weight: 600;
+}
+

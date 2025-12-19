@@ -71,6 +71,13 @@
             site.textContent = art.site;
             card.appendChild(site);
 
+            if (art.price) {
+              const price = document.createElement('div');
+              price.className = 'price';
+              price.textContent = art.price;
+              card.appendChild(price);
+            }
+
             const chip = document.createElement('div');
             chip.className = 'badge';
             chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
