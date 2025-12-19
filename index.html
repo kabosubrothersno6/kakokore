@@ -71,7 +71,7 @@
             site.textContent = art.site;
             card.appendChild(site);
 
-            if (art.price) {
+            if (solvedThis && art.price) {
               const price = document.createElement('div');
               price.className = 'price';
               price.textContent = art.price;
