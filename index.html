@@ -13,6 +13,18 @@
         const iconGrid = document.querySelector('#iconGrid');
         const total = ARTIFACTS.length;
         const solved = solvedCount();
+
+        let totalPrice = 0;
+
+        ARTIFACTS.forEach(art => {
+          if (isSolved(art.id) && art.price && typeof art.price.value === 'number') {
+            totalPrice += art.price.value;
+          }
+        });
+
+        document.getElementById('totalPrice').textContent =
+          totalPrice.toLocaleString() + '円';
+
         document.querySelector('#count').textContent = `${solved}/${total}`;
         document.querySelector('#barfill').style.width = `${Math.round(solved/total*100)}%`;
 
@@ -130,6 +142,11 @@
 
           <div class="actions" style="margin-bottom:12px">
               <button id="reset" class="warn">進捗リセット</button>
+              <div class="total-price">
+                  解いた遺物の推定価格合計：
+                  <strong id="totalPrice">0円</strong>
+              </div>
+
           </div>
           <div class="period-nav">
               <button data-period="縄文時代">縄文時代</button>
