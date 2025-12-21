@@ -83,12 +83,13 @@
             site.textContent = art.site;
             card.appendChild(site);
 
-            if (solvedThis && art.price) {
+            if (solvedThis && art.price && art.price.text) {
               const price = document.createElement('div');
               price.className = 'price';
-              price.textContent = art.price;
+              price.textContent = `推定価格：${art.price.text}`;
               card.appendChild(price);
             }
+
 
             const chip = document.createElement('div');
             chip.className = 'badge';
