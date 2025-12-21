@@ -13,76 +13,93 @@
         const iconGrid = document.querySelector('#iconGrid');
         const total = ARTIFACTS.length;
         const solved = solvedCount();
+
+        let totalPrice = 0;
+
+        ARTIFACTS.forEach(art => {
+          if (isSolved(art.id) && art.price && typeof art.price.value === 'number') {
+            totalPrice += art.price.value;
+          }
+        });
+
+        document.getElementById('totalPrice').textContent =
+          totalPrice.toLocaleString() + '円';
+
         document.querySelector('#count').textContent = `${solved}/${total}`;
         document.querySelector('#barfill').style.width = `${Math.round(solved/total*100)}%`;
 
-        const sortedById = ARTIFACTS.slice().sort((a, b) => a.id.localeCompare(b.id));
-        if(iconGrid){ iconGrid.innerHTML = ''; }
         grid.innerHTML = '';
 
-        sortedById.forEach(art => { //これに変更
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.setAttribute('data-artifact-id', art.id);
-          const solvedThis = isSolved(art.id);
+        const grouped = {};
+        ARTIFACTS.forEach(art => {
+          const key = art.period || '不明';
+          if (!grouped[key]) grouped[key] = [];
+          grouped[key].push(art);
+        });
 
-          if(iconGrid){
-             const iconCard = document.createElement('div');
-             iconCard.className = 'icon-card';
-             const iconWrap = document.createElement('div');
-             iconWrap.className = 'icon-card__visual';
-             iconWrap.innerHTML = potSVG({color: art.potColor, solved: solvedThis});
-             iconCard.appendChild(iconWrap);
-             const iconName = document.createElement('div');
-             iconName.className = 'icon-card__label';
-             iconName.textContent = art.name;
-             iconCard.appendChild(iconName);
-             iconGrid.appendChild(iconCard);
+        const PERIOD_ORDER = [
+          "縄文時代",
+          "弥生時代",
+          "奈良時代",
+          "平安時代",
+          "鎌倉時代",
+          "室町時代",
+          "江戸時代"
+        ];
+
+        PERIOD_ORDER.forEach(period => {
+          if (!grouped[period]) return;
+
+          const h2 = document.createElement('h2');
+          h2.textContent = period;
+          h2.style.margin = "16px 0 8px";
+          grid.appendChild(h2);
+
+          const section = document.createElement('div');
+          section.className = 'grid';
+
+          grouped[period].forEach(art => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const solvedThis = isSolved(art.id);
+
+            const potWrap = document.createElement('div');
+            potWrap.className = 'pot-wrap';
+            potWrap.innerHTML = potIMG({
+              src: art.imageUrl,
+              solved: solvedThis,
+              alt: art.name
+            });
+            card.appendChild(potWrap);
+
+            const title = document.createElement('div');
+            title.className = 'title';
+            title.textContent = art.name;
+            card.appendChild(title);
+
+            const site = document.createElement('div');
+            site.className = 'muted';
+            site.textContent = art.site;
+            card.appendChild(site);
+
+            if (solvedThis && art.price && art.price.text) {
+              const price = document.createElement('div');
+              price.className = 'price';
+              price.textContent = `推定価格：${art.price.text}`;
+              card.appendChild(price);
             }
 
-          const potWrap = document.createElement('div');
-          potWrap.className = 'pot-wrap';
-          potWrap.innerHTML = potIMG({src: art.imageUrl, solved: solvedThis,alt: art,name});
-          card.appendChild(potWrap);
 
-          const title = document.createElement('div');
-          title.className = 'title';
-          title.textContent = art.name;
-          card.appendChild(title);
+            const chip = document.createElement('div');
+            chip.className = 'badge';
+            chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
+            card.appendChild(chip);
 
-          const site = document.createElement('div');
-          site.className = 'muted';
-          site.textContent = art.site;
-          card.appendChild(site);
+            section.appendChild(card);
+          });
 
-          const chip = document.createElement('div');
-          chip.className = 'badge';
-          chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
-          card.appendChild(chip);
-
-          const actions = document.createElement('div');
-          actions.className = 'actions';
-          const btnExplain = document.createElement('a');
-          // btnExplain.className = 'button';
-          // btnExplain.href = `pages/explain.html?id=${art.id}`;
-          // btnExplain.textContent = '説明を見る';
-        　actions.appendChild(btnExplain);
-
-          const btnQuiz = document.createElement('a');
-          // btnQuiz.className = 'button primary';
-          // btnQuiz.href = `pages/quiz.html?id=${art.id}`;
-          // btnQuiz.textContent = solvedThis ? 'クイズを復習' : 'クイズに挑戦';
-          actions.appendChild(btnQuiz);
-
-          const btnReward = document.createElement('a');
-          // btnReward.className = 'button';
-          // btnReward.href = `pages/reward.html?id=${art.id}`;
-          // btnReward.textContent = 'ごほうびを見る';
-          actions.appendChild(btnReward);
-
-          card.appendChild(actions);
-
-          grid.appendChild(card);
+          grid.appendChild(section);
         });
 
         document.querySelector('#reset').addEventListener('click', () => {
@@ -91,31 +108,58 @@
             location.reload();
           }
         });
+        document.querySelectorAll('.period-nav button').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const period = btn.dataset.period;
+            const headers = document.querySelectorAll('#grid > h2');
+
+            for (const h2 of headers) {
+              if (h2.textContent === period) {
+                h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                break;
+              }
+            }
+          });
+        });
       });
     </script>
   </head>
   <body>
-    <div class="container">
-      <header class="site">
-        <h1>縄文土器 図鑑</h1>
-        <nav>
-          <span class="badge">クイズラリー</span>
-        </nav>
-      </header>
+      <div class="container">
+          <header class="site">
+              <h1>縄文土器 図鑑</h1>
+              <nav>
+                  <span class="badge">クイズラリー</span>
+              </nav>
+          </header>
 
-      <p class="lead">クイズに正解すると、シルエットだった土器に色がつきます。すべて集めてコンプリートを目指そう！</p>
+          <p class="lead">クイズに正解すると、シルエットだった土器に色がつきます。すべて集めてコンプリートを目指そう！</p>
 
-      <div class="progress">
-        <strong>進捗:</strong>
-        <div class="bar"><span id="barfill"></span></div>
-        <span id="count" class="badge">0/0</span>
+          <div class="progress">
+              <strong>進捗:</strong>
+              <div class="bar"><span id="barfill"></span></div>
+              <span id="count" class="badge">0/0</span>
+          </div>
+
+          <div class="actions" style="margin-bottom:12px">
+              <button id="reset" class="warn">進捗リセット</button>
+              <div class="total-price">
+                  解いた遺物の推定価格合計：
+                  <strong id="totalPrice">0円</strong>
+              </div>
+
+          </div>
+          <div class="period-nav">
+              <button data-period="縄文時代">縄文時代</button>
+              <button data-period="弥生時代">弥生時代</button>
+              <button data-period="奈良時代">奈良時代</button>
+              <button data-period="平安時代">平安時代</button>
+              <button data-period="鎌倉時代">鎌倉時代</button>
+              <button data-period="室町時代">室町時代</button>
+              <button data-period="江戸時代">江戸時代</button>
+          </div>
+
+          <section id="grid" aria-live="polite"></section>
       </div>
-
-      <div class="actions" style="margin-bottom:12px">
-        <button id="reset" class="warn">進捗リセット</button>
-      </div>
-
-      <section class="grid" id="grid" aria-live="polite"></section>
-    </div>
   </body>
 </html>

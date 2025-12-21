@@ -97,3 +97,47 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
 .pot.solved {
 /* 例: filter: none; box-shadow: 0 2px 8px #00000022; */
 }
+/* ===== 時代見出し（index.html 用） ===== */
+#grid > h2 {
+    border-left: 6px solid var(--accent);
+    padding-left: 10px;
+    font-size: 20px;
+}
+/* ===== 時代ナビ ===== */
+.period-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 20px;
+}
+
+    .period-nav button {
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 14px;
+        background: #fff;
+        border: 1px solid var(--ring);
+    }
+
+        .period-nav button:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+/* ===== 推定価格 ===== */
+.price {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #92400e; /* 落ち着いた金色 */
+    font-weight: 600;
+}
+
+
+/* ===== 推定価格 合計 ===== */
+.total-price {
+    margin: 12px 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+}

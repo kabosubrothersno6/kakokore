@@ -4,6 +4,11 @@
       id: "1",
       name: "巴形銅器",
       site: "大分市、雄城台遺跡",
+      period:"縄文時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#C0763A",
       imageUrl:"assets/img/id1.png",
       description: "盾や矢筒に取り付けられていた装飾金具。魔除けの意味合いがあるとも言われている。弥生期の北部九州を中心に関東まで点在している。",
@@ -18,10 +23,15 @@
       },
       explanation:"ぐるぐると渦を巻く巴文が外周に伸びる円盤状金具。4～8枚程度の「脚（羽）」、中央に半球状または円錐状の座をもつ。",
     },
-    {
+    /*{
       id: "2",
       name: "深鉢形土器",
       site: "新潟県、笹山遺跡",
+      period:"縄文時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#A6623A",
       imageUrl:"assets/img/id2.png",
       description: "縄文時代の土器で、深い鉢形をしている土器。縄目文様のパターンや焼成の色ムラが見どころです。",
@@ -35,11 +45,16 @@
         ],
         correctIndex: 1
       }
-    },
+    },*/
      {
       id: "3",
       name: "犬型の土製品",
       site: "明野アクロスタウン",
+      period:"弥生時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#C0763A",
       imageUrl:"assets/img/id3.png",
       description: "カボスbrothers第六世代が作った土製品。この土製品を作り、チームみんなの士気が高まった。",
@@ -54,10 +69,15 @@
         correctIndex: 2
       }
     },
-        {
+       /* {
       id: "4",
       name: "壺型土器",
       site: "東京都　上野公園",
+      period:"鎌倉時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#A6623A",
       imageUrl:"assets/img/id4.png",
       description: "縄文時代から弥生時代にかけて作られた口がせまく丸みを帯びた土器",
@@ -72,11 +92,16 @@
         correctIndex: 1
       }
 
-    },
+    },*/
     {
       id: "5",
       name: "玉類",
       site: "大分市大在浜遺跡",
+      period:"奈良時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#C0763A",
       imageUrl:"assets/img/id5.png",
       description: "首飾りとして、きれいな石やガラスの加工品をたくさんつないだもの。",
@@ -95,6 +120,11 @@
       id: "6",
       name: "備蓄銭",
       site: "大分市　中世大友府内町跡",
+      period:"平安時代",
+       price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#C0763A",
       imageUrl:"assets/img/id6.png",
       description:"たくさんの銭が束になってできたかたまり。およそ1万枚の銭があるとされている。",
@@ -113,7 +143,12 @@
       id: "7",
       name: "中広型銅矛",
       site: "玖珠町　元畑遺跡",
-      potColor: "#C0763A",
+      period:"室町時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
+          potColor: "#C0763A",
       imageUrl:"assets/img/id7.png",
       description: "青銅で作られた武器で、中国大陸から朝鮮半島経由で日本に伝わった。北部九州で多く見られる。",
       explanation:"中国大陸から伝わったころは武器として使われていましたが、やがて祭祀をする道具として、大型化していった。お墓に入り、お祭りに使い埋められたりしたものが発掘調査で出てきている。",
@@ -131,6 +166,11 @@
       id: "8",
       name: "注口土器",
       site: "大分県立埋蔵文化財センター",
+      period:"江戸時代",
+      price: {
+        text: "数百万円以上",
+        value: 3000000
+      },
       potColor: "#C0763A",
       imageUrl:"assets/img/id8.png",
       description: "土器の側面に小さな穴が開いている土器",
