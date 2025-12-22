@@ -13,6 +13,11 @@
         const iconGrid = document.querySelector('#iconGrid');
         const total = ARTIFACTS.length;
         const solved = solvedCount();
+        const threeDButton = document.getElementById('threeDButton');
+
+        if (solved === total) {
+          threeDButton.classList.remove('hidden');
+        }
 
         let totalPrice = 0;
 
@@ -142,6 +147,12 @@
           </div>
 
           <div class="actions" style="margin-bottom:12px">
+              <div id="threeDButton" class="threeD-button hidden">
+                  <button onclick="location.href='special-3d.html'">
+                      🧊 特別な遺物を3Dで見る
+                  </button>
+              </div>
+
               <button id="reset" class="warn">進捗リセット</button>
               <div class="total-price">
                   解いた遺物の推定価格合計：
