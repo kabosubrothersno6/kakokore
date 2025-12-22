@@ -13,11 +13,18 @@
         const iconGrid = document.querySelector('#iconGrid');
         const total = ARTIFACTS.length;
         const solved = solvedCount();
-        const threeDButton = document.getElementById('threeDButton');
+        const allSolved = solved === total;
 
-        if (solved === total) {
-          threeDButton.classList.remove('hidden');
+        if (allSolved) {
+          const btn = document.createElement('a');
+          btn.href = 'pages/special-3d.html';   // ★ここ重要
+          btn.className = 'button primary';
+          btn.textContent = '🏆 特別な遺物を3Dで見る';
+
+          const actions = document.querySelector('.actions');
+          actions.prepend(btn); // リセットボタンの上に出す
         }
+
 
         let totalPrice = 0;
 
