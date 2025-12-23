@@ -5,21 +5,6 @@
     <title>特別な遺物を3Dで見る</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <div class="modal-content">
-        <button id="close-modal" class="close-btn">×</button>
-        <h2>🎉 コンプリートおめでとう！</h2>
-        <p>古代の秘宝（3Dモデル）をアンロックしました。</p>
-        <div class="model-wrapper">
-            <!-- Placeholder 3D model (Astronaut) -->
-            <!-- <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" -->
-            <model-viewer src="https://kabosubrothersno6.github.io/kakokore/assets/3dmodel/inu.glb"
-                            alt="A 3D model of an Astronaut" auto-rotate camera-controls ar shadow-intensity="1">
-            </model-viewer>
-        </div>
-    </div>
-
-
     <style>
         body {
             margin: 0;
@@ -61,11 +46,19 @@
     </header>
 
     <div class="viewer">
-        <div class="placeholder">
-            <h1>🧊 特別な遺物（3D）</h1>
-            <p>ここに3Dモデルが表示されます</p>
-            <p>指やマウスで回せる予定</p>
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">×</button>
+            <h2>🎉 コンプリートおめでとう！</h2>
+            <p>古代の秘宝（3Dモデル）をアンロックしました。</p>
+            <div class="model-wrapper">
+                <!-- Placeholder 3D model (Astronaut) -->
+                <!-- <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" -->
+                <model-viewer src="https://kabosubrothersno6.github.io/kakokore/assets/3dmodel/inu.glb"
+                              alt="A 3D model of an Astronaut" auto-rotate camera-controls ar shadow-intensity="1">
+                </model-viewer>
+            </div>
         </div>
+
     </div>
 
 </body>
