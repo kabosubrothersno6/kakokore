@@ -5,6 +5,11 @@
     <title>特別な遺物を3Dで見る</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+
     <style>
         body {
             margin: 0;
@@ -46,20 +51,20 @@
     </header>
 
     <div class="viewer">
-        <div class="modal-content">
-            <button id="close-modal" class="close-btn">×</button>
+        <div class="article">
             <h2>🎉 コンプリートおめでとう！</h2>
             <p>古代の秘宝（3Dモデル）をアンロックしました。</p>
+
             <div class="model-wrapper">
-                <!-- Placeholder 3D model (Astronaut) -->
-                <!-- <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" -->
                 <model-viewer src="https://kabosubrothersno6.github.io/kakokore/assets/3d-model/inu.glb"
-                              alt="A 3D model of an Astronaut" auto-rotate camera-controls ar shadow-intensity="1">
+                              camera-controls
+                              auto-rotate
+                              shadow-intensity="1">
                 </model-viewer>
             </div>
         </div>
-
     </div>
+
 
 </body>
 </html>
