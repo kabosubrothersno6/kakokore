@@ -171,3 +171,29 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
         overflow: hidden;
         border: 1px solid #e5e7eb;
     }
+
+.price-box {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #fff7ed;
+    border: 1px solid var(--accent-2);
+    text-align: center;
+}
+
+.price-label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.price-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.price-text {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--muted);
+}

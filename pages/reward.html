@@ -20,9 +20,35 @@
         document.getElementById('name').textContent = art.name;
         document.getElementById('explain').textContent = art.explanation || '説明はありません。';
 
-
         const solved = JomonQuiz.isSolved(id);
         JomonQuiz.qs('#pot').innerHTML = JomonQuiz.potIMG({src: art.imageUrl,solved,alt: art.name});
+
+        if (art.price) {
+          const box = document.getElementById('priceBox');
+          const numEl = document.getElementById('priceNumber');
+          const textEl = document.getElementById('priceText');
+
+          box.hidden = false;
+          textEl.textContent = art.price.text;
+
+          let current = 0;
+          const target = art.price.value;
+          const duration = 1200; // 1.2秒
+          const start = performance.now();
+
+          function animate(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            current = Math.floor(target * progress);
+            numEl.textContent = current.toLocaleString();
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          }
+
+          requestAnimationFrame(animate);
+        }
+
 
         const msg = document.getElementById('msg');
         if(solved){
@@ -38,22 +64,29 @@
     </script>
 </head>
   <body>
-    <div class="container">
-      <header class="site">
-        <h1 id="name">ごほうび</h1>
-        <!-- <a href="./index.html" class="badge">図鑑へ</a> -->
-      </header>
+      <div class="container">
+          <header class="site">
+              <h1 id="name">ごほうび</h1>
+              <!-- <a href="./index.html" class="badge">図鑑へ</a> -->
+          </header>
+          <div id="priceBox" class="price-box" hidden>
+              <div class="price-label">推定価格</div>
+              <div class="price-value">
+                  <span id="priceNumber">0</span> 円
+              </div>
+              <div class="price-text" id="priceText"></div>
+          </div>
 
-      <div class="reward-box">
-          <div id="pot" class="pot-wrap"></div>
-          <p id="msg" style="margin:8px 0 0 0"></p>
-          <p id="explain" class="explain" style="margin-top:10px;"></p>
-          <div class="actions" style="margin-top:10px">
-              <a id="toIndex" class="button primary">図鑑へ戻る</a>
-              <a id="toExplain" class="button">説明を見る</a>
-              <a id="toQuiz" class="button">クイズへ</a>
+          <div class="reward-box">
+              <div id="pot" class="pot-wrap"></div>
+              <p id="msg" style="margin:8px 0 0 0"></p>
+              <p id="explain" class="explain" style="margin-top:10px;"></p>
+              <div class="actions" style="margin-top:10px">
+                  <a id="toIndex" class="button primary">図鑑へ戻る</a>
+                  <a id="toExplain" class="button">説明を見る</a>
+                  <a id="toQuiz" class="button">クイズへ</a>
+              </div>
           </div>
       </div>
-    </div>
   </body>
 </html>
