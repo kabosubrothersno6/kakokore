@@ -162,14 +162,17 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
         cursor: pointer;
     }
 
-    .model-wrapper{
+    .model-wrapper {
         width: 100%;
-        height: 400px;
+        height: 70vh; /* ← 画面の70%を使う */
+        max-height: 800px; /* ← 大きくなりすぎ防止 */
         background: #f9fafb;
-        border-radius: 8px;
+        border-radius: 12px;
         margin-top: 16px;
         overflow: hidden;
         border: 1px solid #e5e7eb;
+    }
+
     }
 
 .price-box {
