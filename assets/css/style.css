@@ -126,21 +126,21 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
         }
 
 /* ===== 推定価格 ===== */
-.price {
+/*.price {
     margin-top: 6px;
     font-size: 13px;
-    color: #92400e; /* 落ち着いた金色 */
-    font-weight: 600;
-}
+    color: #92400e;*/ /* 落ち着いた金色 */
+    /*font-weight: 600;
+}*/
 
 
 /* ===== 推定価格 合計 ===== */
-.total-price {
+/*.total-price {
     margin: 12px 0 20px;
     font-size: 16px;
     font-weight: 700;
     color: var(--accent);
-}
+}*/
 
 .hidden {
     display: none;
@@ -196,4 +196,16 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
     margin-top: 4px;
     font-size: 14px;
     color: var(--muted);
+}
+
+.rarity {
+    font-size: 18px;
+    color: #f5b301;
+    margin-top: 4px;
+}
+
+.rarity-value {
+    font-size: 28px;
+    color: #f5b301;
+    letter-spacing: 4px;
 }
