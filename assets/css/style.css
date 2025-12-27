@@ -209,3 +209,48 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
     color: #f5b301;
     letter-spacing: 4px;
 }
+
+/* ★5専用カード演出 */
+.card.legendary {
+    position: relative;
+    border: 2px solid gold;
+    box-shadow: 0 0 16px rgba(255, 215, 0, 0.8);
+    animation: legendaryGlow 2.5s infinite alternate;
+}
+
+@keyframes legendaryGlow {
+    from {
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+    }
+}
+
+/* 星自体も金色に */
+.card.legendary .rarity {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.legend-badge {
+    margin-top: 12px;
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: bold;
+    color: gold;
+    background: linear-gradient(90deg, #5a3, #fd0, #5a3);
+    border-radius: 999px;
+    animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+    from {
+        filter: brightness(0.9);
+    }
+
+    to {
+        filter: brightness(1.3);
+    }
+}

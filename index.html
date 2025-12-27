@@ -88,6 +88,17 @@
               card.appendChild(rarity);
             }
 
+           if (solvedThis && art.rarity) {
+                const rarity = document.createElement('div');
+                rarity.className = 'rarity';
+                rarity.textContent = renderStars(art.rarity.stars);
+
+                if (art.rarity.stars === 5) {
+                card.classList.add('legendary');
+                }
+
+                card.appendChild(rarity);
+            }
 
 
             const chip = document.createElement('div');
