@@ -299,3 +299,26 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
         transform: translateY(0);
     }
 }
+
+/* ★5 伝説カード */
+.card.legendary {
+    border: 2px solid #f5d36a;
+    background: linear-gradient( 180deg, #2b1b00, #3a2600 );
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.6), inset 0 0 6px rgba(255, 215, 0, 0.3);
+    position: relative;
+}
+
+    /* ★5ラベル（読みやすい） */
+    .card.legendary::before {
+        content: "LEGENDARY";
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        font-size: 0.65rem;
+        font-weight: bold;
+        color: #3a2600;
+        background: #ffd700;
+        padding: 2px 6px;
+        border-radius: 8px;
+    }
+
