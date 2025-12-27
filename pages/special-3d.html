@@ -51,6 +51,32 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
+        .back-button {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 100;
+            display: inline-block;
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: 600;
+            background: #ffffff;
+            color: #9b5d33; /* 図鑑の accent */
+
+            border: 1px solid #e5e7eb;
+            border-radius: 999px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+            .back-button:hover {
+                background: #9b5d33;
+                color: #ffffff;
+                border-color: #9b5d33;
+                transform: translateY(-1px);
+            }
+
     </style>
 
     <!--<style>
