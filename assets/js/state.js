@@ -6,7 +6,7 @@
       site: "大分市、雄城台遺跡",
       period:"縄文時代",
       rarity: {
-      stars: 4,
+      stars: 5,
       text: "とてもレア"
         },
       potColor: "#C0763A",
@@ -99,7 +99,7 @@
       site: "大分市大在浜遺跡",
       period:"奈良時代",
     rarity: {
-      stars: 4,
+      stars: 5,
       text: "とてもレア"
     },
       potColor: "#C0763A",
@@ -145,7 +145,7 @@
       site: "玖珠町　元畑遺跡",
       period:"室町時代",
         rarity: {
-          stars: 4,
+          stars: 1,
           text: "とてもレア"
         },
           potColor: "#C0763A",
@@ -168,7 +168,7 @@
       site: "大分県立埋蔵文化財センター",
       period:"江戸時代",
         rarity: {
-          stars: 4,
+          stars: 2,
           text: "とてもレア"
         },
       potColor: "#C0763A",

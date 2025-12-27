@@ -28,6 +28,12 @@
           return '★'.repeat(count) + '☆'.repeat(max - count);
         }
 
+        if (art.rarity && art.rarity.stars === 5) {
+          const badge = document.getElementById('legendBadge');
+          badge.hidden = false;
+        }
+
+
         if (art.rarity) {
             const box = document.getElementById('rarityBox');
             const starsEl = document.getElementById('rarityStars');
@@ -74,6 +80,18 @@
 
           <div class="reward-box">
               <div id="pot" class="pot-wrap"></div>
+              <div id="legendBadge" class="legendary-box" hidden>
+                  <div class="legendary-title">
+                      🏺 伝説の遺物 🏺
+                  </div>
+                  <div class="legendary-stars">
+                      ★★★★★ Legendary ★★★★★
+                  </div>
+                  <div class="legendary-sub">
+                      特別な価値を持つ遺物を発見しました
+                  </div>
+              </div>
+
               <p id="msg" style="margin:8px 0 0 0"></p>
               <p id="explain" class="explain" style="margin-top:10px;"></p>
               <div class="actions" style="margin-top:10px">

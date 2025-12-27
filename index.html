@@ -81,13 +81,17 @@
             site.textContent = art.site;
             card.appendChild(site);
 
-            if (solvedThis && art.rarity) {
-              const rarity = document.createElement('div');
-              rarity.className = 'rarity';
-              rarity.textContent = renderStars(art.rarity.stars);
-              card.appendChild(rarity);
-            }
+           if (solvedThis && art.rarity) {
+                const rarity = document.createElement('div');
+                rarity.className = 'rarity';
+                rarity.textContent = renderStars(art.rarity.stars);
 
+                if (art.rarity.stars === 5) {
+                card.classList.add('legendary');
+                }
+
+                card.appendChild(rarity);
+            }
 
 
             const chip = document.createElement('div');
@@ -142,8 +146,8 @@
 
           <div class="actions" style="margin-bottom:12px">
               <div id="threeDButton" class="threeD-button hidden">
-                  <button onclick="location.href='special-3d.html'">
-                      🎁 全クリア特典：宝箱を開ける
+                  <button onclick="location.href='pages/special-3d.html'">
+                      🧊 特別な遺物を3Dで見る
                   </button>
               </div>
 
