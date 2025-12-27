@@ -8,6 +8,10 @@
     <script defer src="assets/js/state.js"></script>
     <script defer>
       document.addEventListener('DOMContentLoaded', () => {
+                function renderStars(count) {
+          const max = 5;
+          return '★'.repeat(count) + '☆'.repeat(max - count);
+        }
         const {ARTIFACTS, isSolved, solvedCount, potIMG} = window.JomonQuiz;
         const grid = document.querySelector('#grid');
         const iconGrid = document.querySelector('#iconGrid');
@@ -95,12 +99,13 @@
             site.textContent = art.site;
             card.appendChild(site);
 
-            if (solvedThis && art.price && art.price.text) {
-              const price = document.createElement('div');
-              price.className = 'price';
-              price.textContent = `推定価格：${art.price.text}`;
-              card.appendChild(price);
+            if (solvedThis && art.rarity) {
+              const rarity = document.createElement('div');
+              rarity.className = 'rarity';
+              rarity.textContent = renderStars(art.rarity.stars);
+              card.appendChild(rarity);
             }
+
 
 
             const chip = document.createElement('div');

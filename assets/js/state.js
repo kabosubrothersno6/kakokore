@@ -5,10 +5,10 @@
       name: "巴形銅器",
       site: "大分市、雄城台遺跡",
       period:"縄文時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+      rarity: {
+      stars: 4,
+      text: "とてもレア"
+        },
       potColor: "#C0763A",
       imageUrl:"assets/img/id1.png",
       description: "盾や矢筒に取り付けられていた装飾金具。魔除けの意味合いがあるとも言われている。弥生期の北部九州を中心に関東まで点在している。",
@@ -51,10 +51,10 @@
       name: "犬型の土製品",
       site: "明野アクロスタウン",
       period:"弥生時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+        rarity: {
+          stars: 4,
+          text: "とてもレア"
+        },
       potColor: "#C0763A",
       imageUrl:"assets/img/id3.png",
       description: "カボスbrothers第六世代が作った土製品。この土製品を作り、チームみんなの士気が高まった。",
@@ -98,10 +98,10 @@
       name: "玉類",
       site: "大分市大在浜遺跡",
       period:"奈良時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+    rarity: {
+      stars: 4,
+      text: "とてもレア"
+    },
       potColor: "#C0763A",
       imageUrl:"assets/img/id5.png",
       description: "首飾りとして、きれいな石やガラスの加工品をたくさんつないだもの。",
@@ -121,10 +121,10 @@
       name: "備蓄銭",
       site: "大分市　中世大友府内町跡",
       period:"平安時代",
-       price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+        rarity: {
+            stars: 4,
+            text: "とてもレア"
+        },
       potColor: "#C0763A",
       imageUrl:"assets/img/id6.png",
       description:"たくさんの銭が束になってできたかたまり。およそ1万枚の銭があるとされている。",
@@ -144,10 +144,10 @@
       name: "中広型銅矛",
       site: "玖珠町　元畑遺跡",
       period:"室町時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+        rarity: {
+          stars: 4,
+          text: "とてもレア"
+        },
           potColor: "#C0763A",
       imageUrl:"assets/img/id7.png",
       description: "青銅で作られた武器で、中国大陸から朝鮮半島経由で日本に伝わった。北部九州で多く見られる。",
@@ -167,10 +167,10 @@
       name: "注口土器",
       site: "大分県立埋蔵文化財センター",
       period:"江戸時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+        rarity: {
+          stars: 4,
+          text: "とてもレア"
+        },
       potColor: "#C0763A",
       imageUrl:"assets/img/id8.png",
       description: "土器の側面に小さな穴が開いている土器",
