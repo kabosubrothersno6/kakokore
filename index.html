@@ -15,7 +15,14 @@
         const max = 5;
         return '★'.repeat(count) + '☆'.repeat(max - count);
         }
-        const {ARTIFACTS, isSolved, solvedCount, potIMG} = window.JomonQuiz;
+
+        const JQ = window.JomonQuiz;
+        if (!JQ) {
+          console.error('JomonQuiz is not loaded');
+          return;
+        }
+
+        const { ARTIFACTS, isSolved, solvedCount, potIMG } = JQ;
 
         const solved = solvedCount();
         const total = ARTIFACTS.length;
