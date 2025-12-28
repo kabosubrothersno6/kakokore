@@ -84,11 +84,15 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
 /* 遺物画像ラッパー（必須） */
 .pot-wrap {
     width: 100%;
+    min-height: 120px; /* ← これが重要 */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.card {
+    overflow: visible;
+}
 
 /* ===== 時代見出し（index.html 用） ===== */
 #grid > h2 {

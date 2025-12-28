@@ -21,7 +21,9 @@
         const total = ARTIFACTS.length;
 
         const grid = document.getElementById('grid');
+        if (!grid) return;
         grid.innerHTML = '';
+
 
         window.open3D = function (art) {
           const modal = document.getElementById('modal3d');
