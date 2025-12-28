@@ -5,6 +5,7 @@
       name: "巴形銅器",
       site: "大分市、雄城台遺跡",
       period:"縄文時代",
+      modelUrl: "assets/3d-model/inu.glb",
       rarity: {
       stars: 5,
       text: "とてもレア"
@@ -51,6 +52,7 @@
       name: "犬型の土製品",
       site: "明野アクロスタウン",
       period:"弥生時代",
+      modelUrl: "assets/3d-model/inu.glb",
         rarity: {
           stars: 4,
           text: "とてもレア"
@@ -98,6 +100,7 @@
       name: "玉類",
       site: "大分市大在浜遺跡",
       period:"奈良時代",
+      modelUrl: "assets/3d-model/inu.glb",
     rarity: {
       stars: 5,
       text: "とてもレア"
@@ -121,6 +124,7 @@
       name: "備蓄銭",
       site: "大分市　中世大友府内町跡",
       period:"平安時代",
+      modelUrl: "assets/3d-model/inu.glb",
         rarity: {
             stars: 4,
             text: "とてもレア"
@@ -144,6 +148,7 @@
       name: "中広型銅矛",
       site: "玖珠町　元畑遺跡",
       period:"室町時代",
+      modelUrl: "assets/3d-model/inu.glb",
         rarity: {
           stars: 1,
           text: "とてもレア"
@@ -167,6 +172,7 @@
       name: "注口土器",
       site: "大分県立埋蔵文化財センター",
       period:"江戸時代",
+      modelUrl: "assets/3d-model/inu.glb",
         rarity: {
           stars: 2,
           text: "とてもレア"

@@ -1,132 +1,164 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>縄文土器 図鑑｜クイズラリー</title>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
     <script defer src="assets/js/state.js"></script>
     <script defer>
-      document.addEventListener('DOMContentLoaded', () => {
-                function renderStars(count) {
-          const max = 5;
-          return '★'.repeat(count) + '☆'.repeat(max - count);
+        document.addEventListener('DOMContentLoaded', () => {
+        function renderStars(count) {
+        const max = 5;
+        return '★'.repeat(count) + '☆'.repeat(max - count);
         }
         const {ARTIFACTS, isSolved, solvedCount, potIMG} = window.JomonQuiz;
-        const grid = document.querySelector('#grid');
-        const iconGrid = document.querySelector('#iconGrid');
-        const total = ARTIFACTS.length;
-        const solved = solvedCount();
-        const allSolved = solved === total;
 
-        if (allSolved) {
-          document.getElementById('threeDButton').classList.remove('hidden');
+        const solved = solvedCount();
+        const total = ARTIFACTS.length;
+
+        const grid = document.getElementById('grid');
+        grid.innerHTML = '';
+
+        window.open3D = function (art) {
+          const modal = document.getElementById('modal3d');
+          const viewer = document.getElementById('viewer3d');
+
+          document.getElementById('modal-title').textContent = art.name;
+          viewer.src = art.modelUrl;
+
+          modal.classList.remove('hidden');
+        }
+
+        window.close3D = function () {
+          const modal = document.getElementById('modal3d');
+          const viewer = document.getElementById('viewer3d');
+
+          viewer.src = "";
+          modal.classList.add('hidden');
         }
 
         document.querySelector('#count').textContent = `${solved}/${total}`;
         document.querySelector('#barfill').style.width = `${Math.round(solved/total*100)}%`;
 
-        grid.innerHTML = '';
-
         const grouped = {};
         ARTIFACTS.forEach(art => {
-          const key = art.period || '不明';
-          if (!grouped[key]) grouped[key] = [];
-          grouped[key].push(art);
+        const key = art.period || '不明';
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push(art);
         });
 
         const PERIOD_ORDER = [
-          "縄文時代",
-          "弥生時代",
-          "奈良時代",
-          "平安時代",
-          "鎌倉時代",
-          "室町時代",
-          "江戸時代"
+        "縄文時代",
+        "弥生時代",
+        "奈良時代",
+        "平安時代",
+        "鎌倉時代",
+        "室町時代",
+        "江戸時代"
         ];
 
         PERIOD_ORDER.forEach(period => {
-          if (!grouped[period]) return;
+        if (!grouped[period]) return;
 
-          const h2 = document.createElement('h2');
-          h2.textContent = period;
-          h2.style.margin = "16px 0 8px";
-          grid.appendChild(h2);
+        const h2 = document.createElement('h2');
+        h2.textContent = period;
+        h2.style.margin = "16px 0 8px";
+        grid.appendChild(h2);
 
-          const section = document.createElement('div');
-          section.className = 'grid';
+        const section = document.createElement('div');
+        section.className = 'grid';
 
-          grouped[period].forEach(art => {
-            const card = document.createElement('div');
-            card.className = 'card';
+        grouped[period].forEach(art => {
+        const card = document.createElement('div');
+        card.className = 'card';
 
-            const solvedThis = isSolved(art.id);
+        const solvedThis = isSolved(art.id);
 
-            const potWrap = document.createElement('div');
-            potWrap.className = 'pot-wrap';
-            potWrap.innerHTML = potIMG({
-              src: art.imageUrl,
-              solved: solvedThis,
-              alt: art.name
-            });
-            card.appendChild(potWrap);
+        if (solvedThis) {
+        const btn = document.createElement('button');
 
-            const title = document.createElement('div');
-            title.className = 'title';
-            title.textContent = art.name;
-            card.appendChild(title);
+        if (art.modelUrl) {
+        btn.className = 'button primary';
+        btn.textContent = '🧊 3Dで見る';
+        btn.addEventListener('click', () => open3D(art));
+        } else {
+        btn.className = 'button';
+        btn.textContent = '🧊 3D準備中';
+        btn.disabled = true;
+        }
 
-            const site = document.createElement('div');
-            site.className = 'muted';
-            site.textContent = art.site;
-            card.appendChild(site);
-
-           if (solvedThis && art.rarity) {
-                const rarity = document.createElement('div');
-                rarity.className = 'rarity';
-                rarity.textContent = renderStars(art.rarity.stars);
-
-                if (art.rarity.stars === 5) {
-                card.classList.add('legendary');
-                }
-
-                card.appendChild(rarity);
-            }
+        card.appendChild(btn);
+        }
 
 
-            const chip = document.createElement('div');
-            chip.className = 'badge';
-            chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
-            card.appendChild(chip);
+        const potWrap = document.createElement('div');
+        potWrap.className = 'pot-wrap';
+        potWrap.innerHTML = potIMG({
+        src: art.imageUrl,
+        solved: solvedThis,
+        alt: art.name
+        });
+        card.appendChild(potWrap);
 
-            section.appendChild(card);
-          });
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = art.name;
+        card.appendChild(title);
 
-          grid.appendChild(section);
+        const site = document.createElement('div');
+        site.className = 'muted';
+        site.textContent = art.site;
+        card.appendChild(site);
+
+        if (solvedThis && art.rarity) {
+        const rarity = document.createElement('div');
+        rarity.className = 'rarity';
+        rarity.textContent = renderStars(art.rarity.stars);
+
+        if (art.rarity.stars === 5) {
+            card.classList.add('legendary', 'glow');
+        }
+
+        card.appendChild(rarity);
+        }
+
+
+        const chip = document.createElement('div');
+        chip.className = 'badge';
+        chip.textContent = solvedThis ? 'クリア済み' : '未クリア';
+        card.appendChild(chip);
+
+        section.appendChild(card);
+        });
+
+        grid.appendChild(section);
         });
 
         document.querySelector('#reset').addEventListener('click', () => {
-          if(confirm('進捗をリセットしますか？')){
-            window.JomonQuiz.clearAll();
-            location.reload();
-          }
+        if(confirm('進捗をリセットしますか？')){
+        window.JomonQuiz.clearAll();
+        location.reload();
+        }
         });
         document.querySelectorAll('.period-nav button').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const period = btn.dataset.period;
-            const headers = document.querySelectorAll('#grid > h2');
+        btn.addEventListener('click', () => {
+        const period = btn.dataset.period;
+        const headers = document.querySelectorAll('#grid > h2');
 
-            for (const h2 of headers) {
-              if (h2.textContent === period) {
-                h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                break;
-              }
-            }
-          });
+        for (const h2 of headers) {
+        if (h2.textContent === period) {
+        h2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        break;
+        }
+        }
         });
-      });
+        });
     </script>
-  </head>
+</head>
   <body>
       <div class="container">
           <header class="site">
@@ -145,13 +177,6 @@
           </div>
 
           <div class="actions" style="margin-bottom:12px">
-              <div id="threeDButton" class="hidden">
-                  <button class="button primary" onclick="location.href='pages/special-3d.html'">
-                      🧊 特別な遺物を3Dで見る
-                  </button>
-              </div>
-
-
               <button id="reset" class="warn">進捗リセット</button>
 
           </div>
@@ -167,5 +192,20 @@
 
           <section id="grid" aria-live="polite"></section>
       </div>
+      <div id="modal3d" class="modal hidden">
+          <div class="modal-content">
+              <button class="close" onclick="close3D()">×</button>
+              <h3 id="modal-title"></h3>
+
+              <div class="model-wrapper">
+                  <model-viewer id="viewer3d"
+                                camera-controls
+                                auto-rotate
+                                style="width:100%; height:100%;">
+                  </model-viewer>
+              </div>
+          </div>
+      </div>
+
   </body>
 </html>
