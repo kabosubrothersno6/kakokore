@@ -9,6 +9,7 @@
             src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
     </script>
     <script defer src="assets/js/state.js"></script>
+    <base href="/">
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
         function renderStars(count) {
@@ -18,8 +19,8 @@
 
         const JQ = window.JomonQuiz;
         if (!JQ) {
-          console.error('JomonQuiz is not loaded');
-          return;
+        console.error('JomonQuiz is not loaded');
+        return;
         }
 
         const { ARTIFACTS, isSolved, solvedCount, potIMG } = JQ;
@@ -33,21 +34,21 @@
 
 
         window.open3D = function (art) {
-          const modal = document.getElementById('modal3d');
-          const viewer = document.getElementById('viewer3d');
+        const modal = document.getElementById('modal3d');
+        const viewer = document.getElementById('viewer3d');
 
-          document.getElementById('modal-title').textContent = art.name;
-          viewer.src = art.modelUrl;
+        document.getElementById('modal-title').textContent = art.name;
+        viewer.src = art.modelUrl;
 
-          modal.classList.remove('hidden');
+        modal.classList.remove('hidden');
         }
 
         window.close3D = function () {
-          const modal = document.getElementById('modal3d');
-          const viewer = document.getElementById('viewer3d');
+        const modal = document.getElementById('modal3d');
+        const viewer = document.getElementById('viewer3d');
 
-          viewer.src = "";
-          modal.classList.add('hidden');
+        viewer.src = "";
+        modal.classList.add('hidden');
         }
 
         document.querySelector('#count').textContent = `${solved}/${total}`;
@@ -129,7 +130,7 @@
         rarity.textContent = renderStars(art.rarity.stars);
 
         if (art.rarity.stars === 5) {
-            card.classList.add('legendary', 'glow');
+        card.classList.add('legendary', 'glow');
         }
 
         card.appendChild(rarity);

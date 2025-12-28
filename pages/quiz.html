@@ -1,51 +1,52 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>クイズ｜縄文クイズ</title>
-    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <script defer src="../assets/js/state.js"></script>
+    <base href="/">
     <script defer>
-      document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
-          document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
-          return;
+        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
+        return;
         }
         document.getElementById('name').textContent = art.name;
         document.getElementById('q').textContent = art.question.text;
 
         const list = document.getElementById('choices');
         art.question.choices.forEach((c, i) => {
-          const label = document.createElement('label');
-          label.className = 'choice';
-          label.innerHTML = `<input type="radio" name="ans" value="${i}"/> <span>${c}</span>`;
-          list.appendChild(label);
+        const label = document.createElement('label');
+        label.className = 'choice';
+        label.innerHTML = `<input type="radio" name="ans" value="${i}"/> <span>${c}</span>`;
+        list.appendChild(label);
         });
 
         document.getElementById('submit').addEventListener('click', () => {
-          const sel = document.querySelector('input[name="ans"]:checked');
-          const fb = document.getElementById('fb');
-          if(!sel){ fb.textContent = '選択肢を選んでください。'; fb.style.color = '#b45309'; return;}
-          const idx = Number(sel.value);
-          const ok = idx === art.question.correctIndex;
-          if(ok){
-            fb.textContent = '正解！ごほうびページへ進みます。';
-            fb.style.color = '#16a34a';
-            JomonQuiz.setSolved(art.id, true);
-            setTimeout(() => location.href = `reward.html?id=${art.id}`, 650);
-          }else{
-            fb.textContent = '残念！説明をもう一度読んで再挑戦しよう。';
-            fb.style.color = '#b45309';
-          }
+        const sel = document.querySelector('input[name="ans"]:checked');
+        const fb = document.getElementById('fb');
+        if(!sel){ fb.textContent = '選択肢を選んでください。'; fb.style.color = '#b45309'; return;}
+        const idx = Number(sel.value);
+        const ok = idx === art.question.correctIndex;
+        if(ok){
+        fb.textContent = '正解！ごほうびページへ進みます。';
+        fb.style.color = '#16a34a';
+        JomonQuiz.setSolved(art.id, true);
+        setTimeout(() => location.href = `reward.html?id=${art.id}`, 650);
+        }else{
+        fb.textContent = '残念！説明をもう一度読んで再挑戦しよう。';
+        fb.style.color = '#b45309';
+        }
         });
 
         document.getElementById('backExplain').href = `explain.html?id=${art.id}`;
-      });
+        });
     </script>
-  </head>
+</head>
   <body>
     <div class="container">
       <header class="site">
