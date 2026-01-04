@@ -36,7 +36,7 @@
         fb.textContent = '正解！ごほうびページへ進みます。';
         fb.style.color = '#16a34a';
         JomonQuiz.setSolved(art.id, true);
-        setTimeout(() => location.href = `reward.html?id=${art.id}`, 650);
+        setTimeout(() => location.href = `pages/reward.html?id=${art.id}`, 650);
         }else{
         fb.textContent = '残念！説明をもう一度読んで再挑戦しよう。';
         fb.style.color = '#b45309';
