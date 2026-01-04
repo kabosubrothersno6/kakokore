@@ -6,9 +6,9 @@
     <title>説明｜縄文クイズ</title>
     <!--<link rel="stylesheet" href="../assets/css/style.css"/>
     <script defer src="../assets/js/state.js"></script>-->
-    <base href="../">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script defer src="assets/js/state.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <base href="/">
+    <script defer src="../assets/js/state.js"></script>
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
         const id = JomonQuiz.param('id');
@@ -27,23 +27,23 @@
         });
     </script>
 </head>
-  <body>
-      <div class="container">
-          <header class="site">
-              <h1 style="font-size: 50px" id="name">資料</h1>
-              <a href="./index.html" class="badge">図鑑へ</a>
-          </header>
+<body>
+    <div class="container">
+        <header class="site">
+            <h1 style="font-size: 50px" id="name">資料</h1>
+            <a href="./index.html" class="badge">図鑑へ</a>
+        </header>
 
-          <div class="article">
-              <div class="pot-wrap" id="pot"></div>
-              <h3>発掘場所</h3>
-              <p class="muted" id="site"></p>
-              <h3>説明</h3>
-              <p id="desc"></p>
-          </div>
-          <div class="actions" style="margin-top:12px">
-              <a id="toquiz" class="button primary">この資料のクイズへ進む</a>
-          </div>
-      </div>
-  </body>
+        <div class="article">
+            <div class="pot-wrap" id="pot"></div>
+            <h3>発掘場所</h3>
+            <p class="muted" id="site"></p>
+            <h3>説明</h3>
+            <p id="desc"></p>
+        </div>
+        <div class="actions" style="margin-top:12px">
+            <a id="toquiz" class="button primary">この資料のクイズへ進む</a>
+        </div>
+    </div>
+</body>
 </html>

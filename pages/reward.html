@@ -6,7 +6,7 @@
     <title>ごほうび｜縄文クイズ</title>
     <!--<link rel="stylesheet" href="../assets/css/style.css"/>
     <script defer src="../assets/js/state.js"></script>-->
-    <base href="../">
+    <base href="/">
     <link rel="stylesheet" href="assets/css/style.css" />
     <script defer src="assets/js/state.js"></script>
     <script defer>
@@ -24,33 +24,33 @@
         JomonQuiz.qs('#pot').innerHTML = JomonQuiz.potIMG({src: art.imageUrl,solved,alt: art.name});
 
         function renderStars(count) {
-          const max = 5;
-          return '★'.repeat(count) + '☆'.repeat(max - count);
+        const max = 5;
+        return '★'.repeat(count) + '☆'.repeat(max - count);
         }
 
         if (art.rarity && art.rarity.stars === 5) {
-          const badge = document.getElementById('legendBadge');
-          badge.hidden = false;
+        const badge = document.getElementById('legendBadge');
+        badge.hidden = false;
         }
 
 
         if (art.rarity) {
-            const box = document.getElementById('rarityBox');
-            const starsEl = document.getElementById('rarityStars');
-            const textEl = document.getElementById('rarityText');
+        const box = document.getElementById('rarityBox');
+        const starsEl = document.getElementById('rarityStars');
+        const textEl = document.getElementById('rarityText');
 
-            box.hidden = false;
-            textEl.textContent = art.rarity.text || '';
+        box.hidden = false;
+        textEl.textContent = art.rarity.text || '';
 
-            let current = 0;
-            const target = art.rarity.stars;
-            const interval = 400;
+        let current = 0;
+        const target = art.rarity.stars;
+        const interval = 400;
 
-            const timer = setInterval(() => {
-            current++;
-            starsEl.textContent = renderStars(current);
-            if (current >= target) clearInterval(timer);
-            }, interval);
+        const timer = setInterval(() => {
+        current++;
+        starsEl.textContent = renderStars(current);
+        if (current >= target) clearInterval(timer);
+        }, interval);
         }
 
         const msg = document.getElementById('msg');
@@ -66,40 +66,40 @@
         });
     </script>
 </head>
-  <body>
-      <div class="container">
-          <header class="site">
-              <h1 id="name">ごほうび</h1>
-              <!-- <a href="./index.html" class="badge">図鑑へ</a> -->
-          </header>
-          <div id="rarityBox" class="rarity-box" hidden>
-              <div class="rarity-label">レア度</div>
-              <div class="rarity-value" id="rarityStars">☆☆☆☆☆</div>
-              <div class="rarity-text" id="rarityText"></div>
-          </div>
+<body>
+    <div class="container">
+        <header class="site">
+            <h1 id="name">ごほうび</h1>
+            <!-- <a href="./index.html" class="badge">図鑑へ</a> -->
+        </header>
+        <div id="rarityBox" class="rarity-box" hidden>
+            <div class="rarity-label">レア度</div>
+            <div class="rarity-value" id="rarityStars">☆☆☆☆☆</div>
+            <div class="rarity-text" id="rarityText"></div>
+        </div>
 
-          <div class="reward-box">
-              <div id="pot" class="pot-wrap"></div>
-              <div id="legendBadge" class="legendary-box" hidden>
-                  <div class="legendary-title">
-                      🏺 伝説の遺物 🏺
-                  </div>
-                  <div class="legendary-stars">
-                      ★★★★★ Legendary ★★★★★
-                  </div>
-                  <div class="legendary-sub">
-                      特別な価値を持つ遺物を発見しました
-                  </div>
-              </div>
+        <div class="reward-box">
+            <div id="pot" class="pot-wrap"></div>
+            <div id="legendBadge" class="legendary-box" hidden>
+                <div class="legendary-title">
+                    🏺 伝説の遺物 🏺
+                </div>
+                <div class="legendary-stars">
+                    ★★★★★ Legendary ★★★★★
+                </div>
+                <div class="legendary-sub">
+                    特別な価値を持つ遺物を発見しました
+                </div>
+            </div>
 
-              <p id="msg" style="margin:8px 0 0 0"></p>
-              <p id="explain" class="explain" style="margin-top:10px;"></p>
-              <div class="actions" style="margin-top:10px">
-                  <a id="toIndex" class="button primary">図鑑へ戻る</a>
-                  <a id="toExplain" class="button">説明を見る</a>
-                  <a id="toQuiz" class="button">クイズへ</a>
-              </div>
-          </div>
-      </div>
-  </body>
+            <p id="msg" style="margin:8px 0 0 0"></p>
+            <p id="explain" class="explain" style="margin-top:10px;"></p>
+            <div class="actions" style="margin-top:10px">
+                <a id="toIndex" class="button primary">図鑑へ戻る</a>
+                <a id="toExplain" class="button">説明を見る</a>
+                <a id="toQuiz" class="button">クイズへ</a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
