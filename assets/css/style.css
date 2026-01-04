@@ -1,72 +1,200 @@
-:root{
-  --bg: #faf7f2;
-  --card: #ffffff;
-  --ink: #1f2937;
-  --muted:#6b7280;
-  --accent:#9b5d33; /* terracotta */
-  --accent-2:#d6a67a;
-  --ok:#16a34a;
-  --warn:#b45309;
-  --ring:#e5e7eb;
+:root {
+    --bg: #faf7f2;
+    --card: #ffffff;
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --accent: #9b5d33; /* terracotta */
+    --accent-2: #d6a67a;
+    --ok: #16a34a;
+    --warn: #b45309;
+    --ring: #e5e7eb;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:960px;margin:0 auto;padding:24px}
-header.site{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:12px 0}
-header.site h1{font-size:clamp(20px,4vw,28px);margin:0}
-.badge{display:inline-block;border:1px solid var(--ring);border-radius:999px;padding:6px 12px;font-size:16px;background:#fff}
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:16px
+* {
+    box-sizing: border-box
 }
-.card{
-  background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:14px;
-  display:flex;flex-direction:column;gap:8px;
-  box-shadow:0 1px 0 rgba(0,0,0,.03)
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji
 }
-.card .title{font-weight:700}
-.card .muted{color:var(--muted);font-size:12px}
-.card .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-button, .button{
-  appearance:none;border:1px solid var(--ring);background:#fff;border-radius:12px;padding:10px 12px;font-size:14px;cursor:pointer
+
+a {
+    color: var(--accent);
+    text-decoration: none
 }
-button.primary, .button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
-button.warn{background:var(--warn);border-color:var(--warn);color:#fff}
-button:disabled{opacity:.6;cursor:not-allowed}
-.progress{
-  display:flex;gap:8px;align-items:center;margin:8px 0 16px 0
+
+    a:hover {
+        text-decoration: underline
+    }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px
 }
-.progress .bar{
-  flex:1;height:8px;border-radius:999px;background:#eee;overflow:hidden
+
+header.site {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 12px 0
 }
-.progress .bar > span{
-  display:block;height:100%;background:var(--accent);width:0%
+
+    header.site h1 {
+        font-size: clamp(20px,4vw,28px);
+        margin: 0
+    }
+
+.badge {
+    display: inline-block;
+    border: 1px solid var(--ring);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 16px;
+    background: #fff
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 16px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--ring);
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.03)
+}
+
+    .card .title {
+        font-weight: 700
+    }
+
+    .card .muted {
+        color: var(--muted);
+        font-size: 12px
+    }
+
+    .card .actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 6px
+    }
+
+button, .button {
+    appearance: none;
+    border: 1px solid var(--ring);
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer
+}
+
+    button.primary, .button.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff
+    }
+
+    button.ok {
+        background: var(--ok);
+        border-color: var(--ok);
+        color: #fff
+    }
+
+    button.warn {
+        background: var(--warn);
+        border-color: var(--warn);
+        color: #fff
+    }
+
+    button:disabled {
+        opacity: .6;
+        cursor: not-allowed
+    }
+
+.progress {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: 8px 0 16px 0
+}
+
+    .progress .bar {
+        flex: 1;
+        height: 8px;
+        border-radius: 999px;
+        background: #eee;
+        overflow: hidden
+    }
+
+        .progress .bar > span {
+            display: block;
+            height: 100%;
+            background: var(--accent);
+            width: 0%
+        }
 
 /* content */
-.article{
-  background:#fff;border:1px solid var(--ring);border-radius:14px;padding:18px;line-height:1.00
+.article {
+    background: #fff;
+    border: 1px solid var(--ring);
+    border-radius: 14px;
+    padding: 18px;
+    line-height: 1.00
 }
-.article h2{margin-top:0}
-.lead{color:var(--muted)}
+
+    .article h2 {
+        margin-top: 0
+    }
+
+.lead {
+    color: var(--muted)
+}
 
 /* quiz */
-fieldset{border:none;padding:0;margin:0}
-fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
-.choice input{margin-top:3px}
-.feedback{margin-top:12px;font-weight:700}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0
+}
+
+    fieldset .choice {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 8px 0
+    }
+
+.choice input {
+    margin-top: 3px
+}
+
+.feedback {
+    margin-top: 12px;
+    font-weight: 700
+}
 
 /* reward */
-.reward-box{
-  background:linear-gradient(180deg,#fff, #ffe9d5);
-  border:1px solid var(--accent-2);
-  border-radius:16px;padding:18px
+.reward-box {
+    background: linear-gradient(180deg,#fff, #ffe9d5);
+    border: 1px solid var(--accent-2);
+    border-radius: 16px;
+    padding: 18px
 }
+
 .pot {
     display: block;
     max-width: 100%;
@@ -166,16 +294,16 @@ fieldset .choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
     position: relative;
 }
 
-.card.legendary.glow {
-    animation: legendaryGlow 2.5s infinite alternate;
-}
+    .card.legendary.glow {
+        animation: legendaryGlow 2.5s infinite alternate;
+    }
 
-/* 星自体も金色に */
+    /* 星自体も金色に */
 
-.card.legendary .rarity {
-    color: gold;
-    font-size: 1.2em;
-}
+    .card.legendary .rarity {
+        color: gold;
+        font-size: 1.2em;
+    }
 
 
 .modal {
