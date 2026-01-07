@@ -203,7 +203,8 @@
     qsa(sel, root=document){ return Array.from(root.querySelectorAll(sel)); },
     param(name){ return new URLSearchParams(location.search).get(name); },
     potIMG({src, solved=false, alt="縄文土器"}) {
-      const cls = solved ? "pot solved" : "pot unsolved";
+      const size = solved ? "large" : "small";
+      const cls = `pot ${size} ${solved ? 'solved' : 'unsolved'}`;
       return `<img class="${cls}" src="${src}" alt="${alt}" loading="eager" decoding="async">`;
     }
   };
