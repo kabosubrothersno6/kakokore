@@ -208,6 +208,9 @@ fieldset {
     .pot.large {
         width: 200px;
     }
+    .pot.unsolved{
+        filter: grayscale(1)  brightness(0);
+    }
 
 /* 遺物画像ラッパー（必須） */
 .pot-wrap {
