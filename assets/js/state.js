@@ -213,8 +213,8 @@
   const ARTIFACTS = [
     {
       id: "1",
-      name: "巴形銅器",
-      site: "大分市、雄城台遺跡",
+      name: "縄文深鉢",
+      site: "佐知遺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"縄文時代",
       rarity: {
@@ -237,8 +237,9 @@
     },
     {
       id: "2",
-      name: "犬型土製品",
-      site: "大分kicks×Crefus明野校",
+      name: "柄付石斧",
+      site: "下群桑苗遺跡",
+     owner: "大分県立埋蔵文化財センター所蔵",
       period:"縄文時代",
          rarity: {
           stars: 4,
@@ -260,8 +261,9 @@
     },
      {
       id: "3",
-      name: "犬型の土製品",
-      site: "明野アクロスタウン",
+      name: "馬具",
+      site: "飛山横穴墓群",
+    　owner: "大分県立埋蔵文化財センター所蔵",
       period:"弥生時代",
         rarity: {
           stars: 4,
@@ -283,8 +285,9 @@
     },
      {
       id: "4",
-      name: "犬型土製品",
-      site: "大分Kicks×Crefus明野校",
+      name: "唾壺",
+      site: "四日市遺跡",
+    　 owner: "大分県立埋蔵文化財センター所蔵",
       period:"鎌倉時代",
      rarity: {
           stars: 4,
@@ -307,8 +310,8 @@
     },
     {
       id: "5",
-      name: "玉類",
-      site: "大分市大在浜遺跡",
+      name: "金箔土師器",
+      site: "中世大友府内遺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"奈良時代",
     rarity: {
@@ -331,8 +334,8 @@
     },
          {
       id: "6",
-      name: "備蓄銭",
-      site: "大分市　中世大友府内町跡",
+      name: "さし銭",
+      site: "中世大友府内町跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"平安時代",
         rarity: {
@@ -355,9 +358,9 @@
     },
          {
       id: "7",
-      name: "中広型銅矛",
-      site: "玖珠町　元畑遺跡",
-      owner: "玖珠町所蔵",
+      name: "犬型土製品",
+      site: "中世大友府内遺跡",
+      owner: "大分県立埋蔵文化財センター所蔵",
       period:"室町時代",
         rarity: {
           stars: 1,
@@ -379,8 +382,8 @@
     },
          {
       id: "8",
-      name: "注口土器",
-      site: "諫山遺跡",
+      name: "鬼瓦",
+      site: "万寿寺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"江戸時代",
         rarity: {
