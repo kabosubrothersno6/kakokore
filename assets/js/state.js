@@ -237,15 +237,15 @@
     },
     {
       id: "2",
-      name: "深鉢形土器",
-      site: "新潟県、笹山遺跡",
+      name: "犬型土製品",
+      site: "大分kicks×Crefus明野校",
       period:"縄文時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+         rarity: {
+          stars: 4,
+          text: "とてもレア"
+        },
       potColor: "#A6623A",
-      imageUrl:"assets/img/id2.png",
+      imageUrl:"assets/img/id3.png",
       description: "縄文時代の土器で、深い鉢形をしている土器。縄目文様のパターンや焼成の色ムラが見どころです。",
       explanation:"この深鉢型土器は、火焔型土器(かえんがたどき)と呼ばれ、大きく立ち上がる突起が、燃え盛る炎のように見えることから命名されました。",
       question: {
@@ -283,15 +283,15 @@
     },
      {
       id: "4",
-      name: "壺型土器",
-      site: "東京都　上野公園",
+      name: "犬型土製品",
+      site: "大分Kicks×Crefus明野校",
       period:"鎌倉時代",
-      price: {
-        text: "数百万円以上",
-        value: 3000000
-      },
+     rarity: {
+          stars: 4,
+          text: "とてもレア"
+        },
       potColor: "#A6623A",
-      imageUrl:"assets/img/id4.png",
+      imageUrl:"assets/img/id3.png",
       description: "縄文時代から弥生時代にかけて作られた口がせまく丸みを帯びた土器",
       explanation:"壺型土器は、縄文時代から弥生時代にかけて、水や食べ物を貯めたり、祭祀(さいし)に使ったり、人骨を納めるために使ったりと幅広く使われていました。なお、1番目の器は高坏(たかつき)、3番目の器は甕(かめ)の説明です。",
       question: {
