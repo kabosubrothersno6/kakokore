@@ -23,6 +23,12 @@
         return;
         }
 
+        JQ.showWelcomeOnce({
+        key: "welcome",
+        legacyKeys: ["index", "pages/explain"],
+        cleanupLegacy: true
+        });
+
         const { ARTIFACTS, isSolved, solvedCount, potIMG } = JQ;
 
         const solved = solvedCount();

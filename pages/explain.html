@@ -11,6 +11,12 @@
     <script defer src="assets/js/state.js"></script>
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
+        JomonQuiz.showWelcomeOnce({
+        key: "welcome",
+        legacyKeys: ["index", "pages/explain"],
+        cleanupLegacy: true
+        });
+
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
@@ -45,11 +51,6 @@
             <h1 style="font-size: 50px" id="name">資料</h1>
             <a href="index.html" class="badge">図鑑へ</a>
         </header>
-
-        <div class="notice">
-            ※ 小学生以下のお子さまは、保護者の方と一緒にクイズに挑戦することをおすすめします。
-        </div>
-
 
         <div class="article">
             <div class="pot-wrap" id="pot"></div>
