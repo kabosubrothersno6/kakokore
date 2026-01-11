@@ -31,7 +31,7 @@
       site: "下群桑苗遺跡",
      owner: "大分県立埋蔵文化財センター所蔵",
       period:"弥生時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/etukiisiono.glb",
          rarity: {
           stars: 4,
           text: "とてもレア"
@@ -56,7 +56,7 @@
       site: "飛山横穴墓群",
     　owner: "大分県立埋蔵文化財センター所蔵",
       period:"古墳時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/bagu.glb",
         rarity: {
           stars: 4,
           text: "とてもレア"
@@ -81,7 +81,7 @@
       site: "四日市遺跡",
     　 owner: "大分県立埋蔵文化財センター所蔵",
       period:"奈良時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/dako.glb",
      rarity: {
           stars: 5,
           text: "とてもレア"
@@ -107,7 +107,7 @@
       site: "中世大友府内遺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"安土桃山時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/kinpakuhaziki.glb",
     rarity: {
       stars: 5,
       text: "とてもレア"
@@ -132,7 +132,7 @@
       site: "中世大友府内町跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"安土桃山時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/sasizeni.glb",
         rarity: {
             stars: 4,
             text: "とてもレア"
@@ -157,7 +157,7 @@
       site: "中世大友府内遺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"安土桃山時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/inugatadoseihin.glb",
         rarity: {
           stars: 1,
           text: "とてもレア"
@@ -182,7 +182,7 @@
       site: "万寿寺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"安土桃山時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/onigawara.glb",
         rarity: {
           stars: 2,
           text: "とてもレア"
