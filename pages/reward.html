@@ -14,7 +14,7 @@
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
-        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="../index.html">図鑑へ戻る</a></p>';
+        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="index.html">図鑑へ戻る</a></p>';
         return;
         }
         document.getElementById('name').textContent = art.name;

@@ -6,15 +6,15 @@
     <title>説明｜縄文クイズ</title>
     <!--<link rel="stylesheet" href="../assets/css/style.css"/>
     <script defer src="../assets/js/state.js"></script>-->
-    <link rel="stylesheet" href="../assets/css/style.css" />
     <base href="../">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script defer src="assets/js/state.js"></script>
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
-        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="./index.html">図鑑へ戻る</a></p>';
+        document.getElementById('content').innerHTML = '<p>指定された資料が見つかりませんでした。<a href="index.html">図鑑へ戻る</a></p>';
         return;
         }
         document.getElementById('name').textContent = art.name;
@@ -43,7 +43,7 @@
     <div class="container" id="content">
         <header class="site">
             <h1 style="font-size: 50px" id="name">資料</h1>
-            <a href="../index.html" class="badge">図鑑へ</a>
+            <a href="index.html" class="badge">図鑑へ</a>
         </header>
 
         <div class="article">
