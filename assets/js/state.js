@@ -112,7 +112,7 @@
         text: "とてもレア"
       },
       potColor: "#C0763A",
-      imageUrl:"assets/img/dako.png",
+      imageUrl:"assets/img/kinpakudoshiki_kari.png",
       description: "首飾りとして、きれいな石やガラスの加工品をたくさんつないだもの。",
       explanation:"解説作成中",
       question: {
@@ -187,7 +187,7 @@
         text: "とてもレア"
       },
       potColor: "#C0763A",
-      imageUrl:"assets/img/bagu.png",
+      imageUrl:"assets/img/onigawara_kari.png",
       description: "土器の側面に小さな穴が開いている土器",
       explanation:"解説作成中",
       question: {
