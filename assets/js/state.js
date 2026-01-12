@@ -232,7 +232,7 @@
       const key = opts.key || defaultWelcomeKey();
       const legacyKeys = Array.isArray(opts.legacyKeys) ? opts.legacyKeys : [];
       const title = opts.title || "初めての方へ";
-      const desc = opts.desc || "この図鑑は、クイズに正解すると土器に色がつきます。気になる資料からクイズに挑戦してみよう。       ※しょうがくせいいかのおこさまは、ほごしゃのかたとちょうせんしてね。";
+      const desc = opts.desc || "この図鑑は、クイズに正解すると土器に色がつきます。気になる資料からクイズに挑戦してみよう。  ※プライベートブラウザで開かないでください     ※しょうがくせいいかのおこさまは、ほごしゃのかたとちょうせんしてね。";
       const buttonText = opts.buttonText || "はじめる";
 
       const hasCurrent = this.isSeen(key);
