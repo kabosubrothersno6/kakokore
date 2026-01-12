@@ -410,3 +410,30 @@ fieldset {
         width: min(30vw, 120px);
     }
 }
+
+/* =========================
+   伝説の遺物（rewardページ）
+   ========================= */
+
+/* タイトル */
+.legendary-title {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/* ★★★★★ Legendary ★★★★★ */
+.legendary-stars {
+    font-family: "Cinzel", "Times New Roman", serif;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #b8860b;
+}
+
+/* レア度ボックス全体 */
+.rarity-box {
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+}
