@@ -113,14 +113,14 @@
       },
       potColor: "#C0763A",
       imageUrl:"assets/img/kinpakudoshiki_kari.png",
-      description: "首飾りとして、きれいな石やガラスの加工品をたくさんつないだもの。",
+      description: "説明文作成中",
       explanation:"解説作成中",
       question: {
-        text: "これらの玉にはひもを通す小さな穴があいていますが、どうやって穴をあけた？",
+        text: "クイズ作成中",
         choices: [
-          "動物の骨や硬い石などを使って穴をあけた",
-          "雨水や滝の水を使って穴をあけた",
-          "砂浜で穴の開いた石をひたすら拾い集めた"
+          "正解",
+          "不正解",
+          "不正解"
         ],
         correctIndex: 0
       }
@@ -188,14 +188,14 @@
       },
       potColor: "#C0763A",
       imageUrl:"assets/img/onigawara_kari.png",
-      description: "土器の側面に小さな穴が開いている土器",
+      description: "説明文作成中",
       explanation:"解説作成中",
       question: {
-        text: "この土器はなぜ穴が開いているのか？",
+        text: "クイズ作成中",
         choices: [
-          "土器の失敗作",
-          "水などを注ぐための穴",
-          "中のものを味見するための穴"
+          "不正解",
+          "正解",
+          "不正解"
         ],
         correctIndex: 1
       }
