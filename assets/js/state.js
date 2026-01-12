@@ -6,7 +6,7 @@
       site: "佐知遺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"縄文時代",
-      modelUrl: "assets/3d-model/inu.glb",
+      //modelUrl: "assets/3d-model/inu.glb",
       rarity: {
         stars: 5,
         text: "とてもレア"
@@ -232,7 +232,7 @@
       const key = opts.key || defaultWelcomeKey();
       const legacyKeys = Array.isArray(opts.legacyKeys) ? opts.legacyKeys : [];
       const title = opts.title || "初めての方へ";
-      const desc = opts.desc || "この図鑑は、クイズに正解すると土器に色がつきます。気になる資料からクイズに挑戦してみよう。       ※小がくせい以下のお子さまは、ほごしゃの方といっしょにちょうせんすることをおすすめします。";
+      const desc = opts.desc || "この図鑑は、クイズに正解すると土器に色がつきます。気になる資料からクイズに挑戦してみよう。       ※しょうがくせいいかのおこさまは、ほごしゃのかたとちょうせんしてね。";
       const buttonText = opts.buttonText || "はじめる";
 
       const hasCurrent = this.isSeen(key);
