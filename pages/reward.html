@@ -11,6 +11,22 @@
     <script defer src="assets/js/state.js"></script>
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
+        const allSolved = JomonQuiz.all().every((art) => JomonQuiz.isSolved(art.id));
+        if (allSolved) {
+        const modal = document.getElementById('completeModal');
+        if (modal) {
+        if (!modal.dataset.bound) {
+        const hide = () => { modal.classList.add('hidden'); };
+        const closeBtn = modal.querySelector('#completeClose');
+        const okBtn = modal.querySelector('#completeOk');
+        if (closeBtn) closeBtn.addEventListener('click', hide);
+        if (okBtn) okBtn.addEventListener('click', hide);
+        modal.dataset.bound = "1";
+        }
+        modal.classList.remove('hidden');
+        }
+        }
+
         const id = JomonQuiz.param('id');
         const art = JomonQuiz.getArtifact(id);
         if(!art){
@@ -112,6 +128,16 @@
                 <div class="footer-brand">Kabosu Brothers</div>
             </div>
         </footer>
+    </div>
+    <div id="completeModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="completeTitle" aria-describedby="completeDesc">
+        <div class="modal-content welcome">
+            <button class="close" id="completeClose" aria-label="閉じる">×</button>
+            <h3 id="completeTitle">おめでとう！</h3>
+            <p id="completeDesc">図鑑を埋めることができました。カウンターに行くと景品があります。</p>
+            <div class="modal-actions">
+                <button class="primary" id="completeOk" type="button">OK</button>
+            </div>
+        </div>
     </div>
     <img class="character-sticker" src="assets/img/tubo_cha.png" alt="キャラクター" />
 </body>
