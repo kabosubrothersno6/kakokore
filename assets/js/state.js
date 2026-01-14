@@ -112,7 +112,7 @@
         text: "とてもレア"
       },
       potColor: "#C0763A",
-      imageUrl:"assets/img/kinpakudoshiki_kari.png",
+      imageUrl:"assets/img/kinpakuhaziki.png",
       description: "中世では、土でこねて作った素焼きのうつわを「かわらけ」と呼んでいた。「かわらけ」は日本で大量に生産され、日常に用いる以外に、宴会や儀礼の場で消費された。",
       explanation:"金箔をはった「かわらけ」は少ないものの武士の館等で見つかることが多く、中世大友府内町跡のものも「武家儀礼」に用いられたと考えられています。",
       question: {
@@ -187,7 +187,7 @@
         text: "とてもレア"
       },
       potColor: "#C0763A",
-      imageUrl:"assets/img/onigawara_kari.png",
+      imageUrl:"assets/img/onigawara.png",
       description: "中世の寺院には、屋根に多くの瓦が葺かれました。屋根の一番高い部分の先には、鬼の顔をした平たい瓦「鬼瓦」がみられた。",
       explanation:"鬼の持つ威圧感や恐怖心などのイメージから、鬼瓦には魔除けや厄除けの役割があったのでしょう。中世の人々は、大きな寺院から鬼瓦が見下ろすさまに圧倒されたかもしれません。",
       question: {
