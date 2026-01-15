@@ -6,7 +6,7 @@
       site: "佐知遺跡",
       owner: "大分県立埋蔵文化財センター所蔵",
       period:"縄文時代",
-      //modelUrl: "assets/3d-model/inu.glb",
+      modelUrl: "assets/3d-model/zyoumonhukabati.glb",
       rarity: {
         stars: 5,
         text: "とてもレア"
