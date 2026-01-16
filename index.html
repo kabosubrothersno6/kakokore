@@ -93,6 +93,14 @@
         const solvedThis = isSolved(art.id);
 
         if (solvedThis) {
+
+        const explainBtn = document.createElement('a');
+        explainBtn.className = 'button';
+        explainBtn.textContent = '📘 説明を見る';
+        explainBtn.href = `pages/explain.html?id=${art.id}`;
+
+        card.appendChild(explainBtn);
+
         const btn = document.createElement('button');
 
         if (art.modelUrl) {
@@ -239,3 +247,4 @@
 </body>
 
 </html>
+<!--index-->
